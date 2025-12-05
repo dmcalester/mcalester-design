@@ -9,9 +9,67 @@
 
 </head>
 <body>
-   <article id="article-2025-12-03">
+   <article id="article-2025-12-03--the-ux-of-getting-laid-off">
+     <header>
+       <h1>The UX of Getting Laid Off</h1>
+       <time datetime="2025-12-05">December 5, 2025</time>
+     </header>
+
+     <p>So getting laid off has exposed me to some truly user-hostile user experience design from companies who know their users can’t leave. That’s been fascinating (and a little infuriating) coming from the world of Department of Defense design, where people have been dealing with hostile interfaces for years simply because they have no choice. In that ecosystem, Byzantine processes and locked-in contracts mean you get what you get. I’ll come back to the DoD angle in a future post, but for now I want to talk about the civilian version of the same problem.</p>
+
+     <p>Two of the clearest examples have been rolling over my 401(k) and signing up for COBRA. My 401(k) was with Voya, and literally every link about rolling it over out of Voya was broken. Rolling it into a Voya IRA? That link worked just fine. But the link with instructions for rolling over to an external plan hit a Cloudflare error. It was the only URL I could find on that domain throwing Cloudflare issues, despite using the exact same domain and subdomain.</p>
+
+     <p>Digging deeper didn’t help. Other rollover-related links simply didn’t work. Links around them—including, again, the ones for opening a Voya IRA—were humming along without issue. To be fair, the Cloudflare problem was resolved later in the day, but those other rollover links stayed unclickable.</p>
+
+     <p>Now, rolling over a 401(k) is a serious first-world problem. I recognize the privilege in even having retirement savings. Worst-case scenario, I leave the money where it is and still get the benefit. But that’s exactly the point: there’s zero incentive for Voya to make it easy for me to leave, so they don’t.</p>
+
+     <p>The second obstacle is less of a first-world problem: COBRA. Since the U.S. is the only developed nation without universal healthcare, the whole process feels like navigating a bureaucratic maze. COBRA is the “generous” government-mandated option that lets you keep your old insurance while putting you on the hook for the full premium.</p>
+
+     <p>Different plans use different portals (some apparently have no portal at all), but mine was through ADP. The entire experience was full of user-hostile decisions. I’m in a fortunate position—no one in my family currently needs expensive medication or a planned procedure—but plenty of people facing COBRA are under real pressure. Those are the users who need the best UX, and like Voya, ADP has no incentive to make this easy. What are you going to do—comparison-shop for COBRA? So you get what you get.</p>
+
+     <p>You get this big packet in the mail—16 pages long—and buried on page 13 is the line, “As we previously shared, our self-service member portal is an integral part of our new service offering.” Reader, I went back through the 13 pages. I scanned them, ran OCR, and even had an LLM review them. There was no mention of a self-service portal anywhere. Then it gets better. The instructions say, “Visit [website], click ‘New User.’” Here’s the home page: no New User link or button to be found. Now imagine someone stressed, not especially technical, trying to keep their health insurance. A 12-point font with a link color failing WCAG AA at 3.04:1. And just for fun, the landing page weighs 1.5 MB compressed and 7.7 MB uncompressed.</p>
+
+     <p>The second issue was worse: the table. A full mess. Cells misaligned, nested tables breaking out of their containers, label columns collapsing. I had to grab the raw HTML and apply my own CSS just to read it, and even then it looked like something dug out of a server that hadn’t been rebooted since 2009.</p>
+     <figure>
+        <picture>
+           <source srcset="img/the-ux-of-getting-laid-off--figure-1.jxl" type="image/jxl" />
+           <source srcset="img/the-ux-of-getting-laid-off--figure-1.webp" type="image/webp" />
+           <img src="img/the-ux-of-getting-laid-off--figure-1.png" alt="Image of a malformed HTML table during a critical decision point for people signing up for COBRA" loading="lazy" />
+        </picture>
+        <figcaption>The malformed table when electing continued health insurance coverage through COBRA. Note: the checkboxes for one participant correctly under Dependant Name, while the second dependent is floating off in its own column.</figcaption>
+     </figure>
+
+     <p>The UX and copy around the table also feel overly final, as if clicking the wrong checkbox will instantly enroll you in a $2,000-per-month plan or, worse, leave you uninsured. That’s not how COBRA actually works—you can opt in and out at certain points—but the UI frames every choice like a trapdoor.</p>
+
+     <p>All of these frustrations point to the same core issue: these systems aren’t designed for people with choice. They’re built for compliance, cost control, and keeping the lights on. And when the organization has no incentive to improve the experience, the experience doesn’t improve.</p>
+
+     <p>I’m trying to be better these days about not stopping at the complaint. Complaining is easy; solutions take work. And in systems built for captive users, the hardest part is accepting that no one else is coming to fix it.</p>
+
+     <p>There are no KPIs for this work. Nobody is getting a shout-out at the quarterly all-hands for fixing a paragraph on a page no one has looked at in half a decade. Captive-user UX rarely gets an executive sponsor, a roadmap slot, or a budget. Yet these experiences often matter the most, because the people using them have no alternatives.</p>
+
+     <p>It reminds me of a <a href="http://obamaspeeches.com/E02-Barack-Obama-Super-Tuesday-Chicago-IL-February-5-2008.htm">quote from Barack Obama</a>:
+       <blockquote>You see, the challenges we face will not be solved with one meeting in one night. Change will not come if we wait for some other person or some other time. We are the ones we've been waiting for. We are the change that we seek.</blockquote>
+     </p>
+
+     <p>If <quote>we’re the ones we’ve been waiting for</quote>, where do you start. I don’t think these are revolutionary ideas, but they are largely actionable.</p>
+
+     <dl>
+        <dt>Know whether your users have choice</dt>
+        <dd>If you’re building for captive users, your responsibility increases. They can’t walk away.</dd>
+
+       <dt>Take ownership of the neglected corners</dt>
+       <dd>Start with something tiny and make it 1% better. Fix a label. Rewrite a sentence. Make sure the terminology in the UI matches the documentation. These small repairs compound and ripple outward.</dd>
+
+       <dt>Go spelunking in your own product</dt>
+       <dd>Use it the way your users do. Not all UX debt needs a months-long research phase. Sit down and use the product.</dd>
+
+     </dl>
+
+   </article>
+   <article id="article-2025-12-03--building-in-public">
       <header>
          <h1>Building in Public</h1>
+         <time datetime="2025-12-03">December 3, 2025</time>
       </header>
       <p>So this is my new site. I haven’t made a personal site in years. I always get stuck. I’m going to get stuck again, but two things are rattling around in my head. First, in my hubris, I think I have interesting things to say and need a place to put them. So they’re going here. The second is <a href="https://en.wikipedia.org/wiki/John_Gall_(author)#Gall's_law">Gall’s Law</a>. I discovered this one on my time working on the AstroUX Design System. Gall’s Law states: <blockquote>A complex system that works is invariably found to have evolved from a simple system that worked. A complex system designed from scratch never works and cannot be patched up to make it work. You have to start over with a working simple system.</blockquote>While I have complex ideas for this site, I can’t start there. So I’m starting as simple as possible – just like the very first web page I ever wrote back in … I don’t know 1993, maybe ’94; back before CSS and JavaScript<a id="article-2025-12-03--building-in-public--footnote-1--anchor"href="#article-2025-12-03--building-in-public--footnote-1"><sup>1</sup></a> were even concepts; back before I even had a PPP internet connection required for using a GUI browser like Mosaic; back before there were even mobile devices capable of displaying web pages – let alone responsive design, this sucker is going to be one HTML page rendered in whatever default state your browser is going to show it in.<a id="article-2025-12-03--building-in-public--footnote-2--anchor" href="#article-2025-12-03--building-in-public--footnote-2"><sup>2</sup></a>.</p>
       <p>That’s it. That’s the site.</p>

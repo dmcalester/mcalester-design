@@ -4,6 +4,12 @@ These are random thoughts as I build this thing. All the bad decisions, wrong pa
 ## 2025-12-05 Nope
 That was too easy to go down a rabbit hole, so nope, just three simple CSS rules: a clamped article width, a single legible font size on all platforms and centered with a simple margin auto. I thought about display: flex or a grid on the body, but that starts to get too far in to layout.
 
+### Second Article
+Okay looks like second article time so we’re going to find some holes now. First one. I missed adding a date to the first article. So we’ll update that. This one will need to support images too. I still want to avoid a build process. I’m thinking about making this an ultra-mac thing. Apple supports folder actions so maybe I’ll use that. Drop images in a folder and have the OS do the conversion. I’m very bullish on JPEG XL, but support isn’t there for Chrome yet so I might do JPEG XR for Safari/FF and whatever the best format is on Chrome/FF/older browsers. I forget.
+
+#### No JPEG XL yet
+No native conversion for JPEG XL yet. Bummer. Ok so two articles now. Added some more ultra minimal styling. I think the next step is to pivot from UX to DX as planned a couple of days ago.
+
 ## 2025-12-04 Let’s first fix URLs and RSS
 So it’s published. Drag and dropped to a Cloudflare Pages site.
 
