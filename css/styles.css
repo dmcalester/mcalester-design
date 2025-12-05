@@ -1,0 +1,5 @@
+article {
+   width: clamp(35ch, 70%, 65ch);
+   font-size: 1.25rem;
+   margin: 0 auto;
+}
