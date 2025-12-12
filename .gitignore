@@ -6,3 +6,7 @@
 
 # macOS-specific files
 .DS_Store
+
+# Notes database copy
+_ignore/
+img/src
