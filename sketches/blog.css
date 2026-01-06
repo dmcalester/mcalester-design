@@ -1,0 +1,37 @@
+body {
+
+   grid-template-rows: auto 1fr auto;
+
+}
+
+nav {
+   background-color: var(--nav-background-color);
+}
+
+#container {
+   position: absolute;
+   top: auto;
+   bottom: 0;
+   height: calc(var(--grid-cell-size) * 4);
+   view-transition-name: container;
+
+   header {
+      grid-row: 2;
+   }
+}
+
+#content {
+   grid-row: 2;
+   overflow-y: auto;
+   /*padding: calc(var(--grid-cell-size) + 1rem) 1rem 1rem 1rem;*/
+   height: 100%;
+   background-color: var(--content-background-color);
+}
+
+::view-transition-old(container),
+::view-transition-new(container) {
+   animation: none;
+}
+::view-transition-group(container) {
+   animation-duration: 0.667s;  /* Controls height/position change */
+}
