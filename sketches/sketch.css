@@ -44,7 +44,7 @@ body {
    grid-template-columns: repeat(auto-fill, var(--grid-cell-size));
    grid-template-rows: repeat(auto-fill, var(--grid-cell-size));
    background-color: var(--primary-color);
-   height: calc(100dvh - var(--grid-cell-size));
+   height: 100cqh;
    width: 100dvw;
    color: var(--text-color);
    z-index: 200;
@@ -95,29 +95,46 @@ header h2 {
 }
 
 nav {
-   position: fixed;
    z-index: 300;
-   top: 0;
-   left: 0;
-   width: 100dvw;
    height: var(--grid-cell-size);
    background-color: var(--nav-background-color--home);
+
+   display: grid;
+   grid-template-columns: repeat(auto-fill, var(--grid-cell-size));
+
 }
 
 nav ul {
    margin: 0;
    padding: 0;
-   display: flex;
-   gap: 1rem;
+   display: grid;
+
+
    list-style: none;
    height: 100%;
    align-items: center;
-   padding-left: 1rem;
+   grid-column: 2 / -1;
+   display: flex;
+
+
+
+
+
 }
 
 nav li {
-   display: block;
-   font-size: 1.25rem;
+
+
+   font-size: 0.875rem;
+   margin-right: 1.5rem;
+
+}
+
+nav a {
+   text-decoration: none;
+   color: var(--cover-text-color);
+   font-weight: 500;
+
 }
 
 #content {
