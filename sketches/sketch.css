@@ -1,18 +1,57 @@
+
+/*
+@font-face {
+   font-family: "Graphik";
+   src: url("fonts/Graphik-Regular-Trial.otf") format("opentype");
+   font-weight: 400;
+   font-style: normal;
+   font-display: swap;
+}
+
+@font-face {
+   font-family: "Graphik";
+   src: url("fonts/Graphik-Medium-Trial.otf") format("opentype");
+   font-weight: 500;
+   font-style: normal;
+   font-display: swap;
+}
+
+@font-face {
+   font-family: "Graphik";
+   src: url("fonts/Graphik-Semibold-Trial.otf") format("opentype");
+   font-weight: 600;
+   font-style: normal;
+   font-display: swap;
+}
+
+@font-face {
+   font-family: "Graphik";
+   src: url("fonts/Graphik-Bold-Trial.otf") format("opentype");
+   font-weight: 700;
+   font-style: normal;
+   font-display: swap;
+}*/
+
 :root {
    --primary-color: #ff2400;
-   --black: oklch(from var(--primary-color) calc(l - .7) calc(c - .025) h);
-   --white: oklch(from var(--primary-color) calc(l + .75) calc(c - .15) h);
+   --black: oklch(.05 0 0);
+   --white: oklch(.95 0 0);
    --content-background-color: light-dark(var(--white), var(--black));
    --text-color: light-dark(var(--black), var(--white));
-   --cover-text-color: light-dark(var(--white), var(--black));
+   /*--cover-text-color: light-dark(var(--white), var(--black));*/
+   --cover-text-color: light-dark(
+      color-mix(in oklch,var(--white), var(--primary-color) 10%),
+      color-mix(in oklch,var(--black), var(--primary-color) 27%));
 
-   --nav-background-color--home: light-dark(
-      oklch(from var(--primary-color) calc(l - .025) c h),
-      oklch(from var(--primary-color) calc(l - .2) calc(c - .07) h));
 
-   --nav-background-color: light-dark(
-      oklch(from var(--content-background-color) calc(l - .1) calc(c - .08) h),
-      oklch(from var(--content-background-color) calc(l + .2) calc(c - .0) h));
+
+   --link-color: var(--primary-color);
+
+   --nav-background-color--home: light-dark(oklch(from var(--primary-color) calc(l - .025) c h),
+         oklch(from var(--primary-color) calc(l - .2) calc(c - .07) h));
+
+   --nav-background-color: light-dark(oklch(from var(--content-background-color) calc(l - .1) calc(c - .08) h),
+         oklch(from var(--content-background-color) calc(l + .2) calc(c - .0) h));
 
    --grid-line-width: 1px;
    --grid-line-color: oklch(from var(--primary-color) calc(l + .05) calc(c - .015) h);
@@ -22,33 +61,48 @@
    --grid-dot-position: calc((var(--grid-cell-size) + var(--grid-line-width)) / 2);
 }
 
+::selection {
+   background-color: var(--primary-color);
+   color: var(--cover-text-color);
+}
+
 @view-transition {
-  navigation: auto;
+   navigation: auto;
 }
 
 body {
    color-scheme: light dark;
    padding: 0;
    margin: 0;
-   font-family: "Graphik Trial", "Helvetica Neue", Helvetica, Arial, sans-serif;
-   background-color: var(--content-background-color);
+   font-family: "Graphik", "Graphik Trial", "Avenir", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+
    display: grid;
+
    grid-template-rows: auto 1fr auto;
    height: 100vh;
    width: 100vw;
 }
 
-#container {
-   grid-row: 3;
+:where(#header, #playground, #main-nav) {
    display: grid;
+   grid-column: 1 / -1;
    grid-template-columns: repeat(auto-fill, var(--grid-cell-size));
    grid-template-rows: repeat(auto-fill, var(--grid-cell-size));
+}
+
+
+#header {
+   grid-row: 3;
+
    background-color: var(--primary-color);
+
    height: 100cqh;
    width: 100dvw;
+
    color: var(--text-color);
    z-index: 200;
-   view-transition-name: container;
+   view-transition-name: header;
 
    background-image:
       radial-gradient(circle at center, var(--grid-dot-color) var(--grid-dot-size), transparent var(--grid-dot-size)),
@@ -60,7 +114,7 @@ body {
 
 
 
-header {
+#masthead {
    display: grid;
    grid-column: 2 / -2;
    grid-row: 3 / -6;
@@ -68,79 +122,103 @@ header {
    grid-template-columns: subgrid;
    grid-template-rows: subgrid;
    color: var(--cover-text-color);
+
+   h1 {
+      grid-row: 1;
+      grid-column: 1 / -1;
+
+      margin: 0;
+      text-indent: calc(var(--grid-cell-size) * -0.095);
+      padding: 0;
+      letter-spacing: 0.01em;
+      line-height: 1;
+      text-box-edge: cap alphabetic;
+      text-box-trim: trim-both;
+      font-size: calc(var(--grid-cell-size) * 1.4);
+      font-weight: bold;
+
+      span {
+         margin-inline: -1px 1px;
+      }
+   }
+
+   h2 {
+      grid-row: 2;
+      grid-column: 1 / 19;
+
+      font-weight: 400;
+      font-size: 1.125rem;
+      letter-spacing: 0.05em;
+
+   }
 }
 
-header h1 {
-   grid-row: 1;
-   grid-column: 1 / -1;
-   margin: 0;
-   text-indent: calc(var(--grid-cell-size) * -0.095);
-   padding: 0;
-   letter-spacing: 0.01em;
-   line-height: 1;
-   text-box-edge: cap alphabetic;
-   text-box-trim: trim-both;
-   font-size: calc(var(--grid-cell-size) * 1.4);
-   font-weight: 600;
-}
 
-header h2 {
-   grid-row: 2;
-   grid-column: 1 / 19;
-   padding: 0;
-   font-weight: 400;
-   font-size: 1.125rem;
-   letter-spacing: 0.05em;
-   color: oklch(from var(--cover-text-color) calc(l + .3) c h);
-}
-
-nav {
+#main-nav {
    z-index: 300;
    height: var(--grid-cell-size);
    background-color: var(--nav-background-color--home);
 
-   display: grid;
-   grid-template-columns: repeat(auto-fill, var(--grid-cell-size));
+
+
+
+   ul {
+      margin: 0;
+      padding: 0;
+
+      list-style: none;
+
+      align-items: center;
+      grid-column: 2 / -1;
+      display: flex;
+      flex-direction: row;
+
+   }
+
+   li {
+      font-size: 0.875rem;
+      margin-right: 1.5rem;
+   }
+
+   a {
+      text-decoration: none;
+      color: var(--cover-text-color);
+      font-weight: 400;
+      opacity: 0.435;
+   }
+
+   &:hover {
+      a {
+         opacity: 1;
+      }
+   }
+
 
 }
 
-nav ul {
-   margin: 0;
-   padding: 0;
-   display: grid;
-
-
-   list-style: none;
-   height: 100%;
-   align-items: center;
-   grid-column: 2 / -1;
-   display: flex;
-
-
-
-
-
-}
-
-nav li {
-
-
-   font-size: 0.875rem;
-   margin-right: 1.5rem;
-
-}
-
-nav a {
-   text-decoration: none;
-   color: var(--cover-text-color);
+#toggle-theme {
+   color: var(--text-color);
+   margin-left: auto;
    font-weight: 500;
 
+   user-select: none;
+   cursor: pointer;
+
 }
 
-#content {
-   grid-row: 2;
-   overflow-y: auto;
-   /*padding: calc(var(--grid-cell-size) + 1rem) 1rem 1rem 1rem;*/
-   height: 0;
-   background-color: white;
+a {
+   text-decoration: underline;
+   text-decoration-thickness: 2px;
+   text-underline-offset: 2px;
+   text-decoration-color: black;
+   color: black;
+   transition: all 1.3s ease;
+}
+
+a:hover {
+   text-decoration: underline;
+   text-decoration-color: red;
+   text-decoration-thickness: 1px;
+   color: black;
+   transition: all 0.3s ease;
 }
