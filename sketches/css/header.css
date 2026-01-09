@@ -16,7 +16,6 @@
    view-transition-name: header; /* duplicate */
 
    background-color: light-dark(var(--key-color), oklch(from var(--black) calc(l + .1) c h));
-
    box-shadow: 0 calc((var(--grid-cell-size) / 2) * -1) 0 var(--content-background-color);
 
 }

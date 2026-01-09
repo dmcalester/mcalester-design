@@ -11,8 +11,7 @@
       oklch(from var(--key-color) calc(l - .1) calc(c - .02) h));
 
 
-   /*background-image:
-      radial-gradient(circle at center, var(--grid-dot-color) var(--grid-dot-size), transparent var(--grid-dot-size));
+   background-image: var(--dot-grid);
    background-size: var(--grid-cell-size) var(--grid-cell-size);
-   background-position: var(--grid-dot-position) var(--grid-dot-position);*/
+   background-position: var(--grid-dot-position) var(--grid-dot-position);
 }

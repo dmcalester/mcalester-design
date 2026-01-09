@@ -56,19 +56,72 @@ article {
       padding-block: calc(var(--grid-cell-size) / 2);
 
 
-      p {
-         padding: 0;
-         margin: 0 0 calc(var(--grid-cell-size) / var(--line-height)) 0;
+
+
+      blockquote, ul, li, p, dl {
+         margin-block-end: calc(var(--grid-cell-size) / var(--line-height));
          line-height: var(--line-height);
          letter-spacing: 0.025em;
          font-size: 0.975rem;
          font-weight: 100;
 
+         padding: 0;
+      }
+
+      ol {
+
+      }
+
+      dt {
+         font-weight: 400;
+      }
+
+      dd {
+         margin: 0 0 1rem 0;
+         padding: 0;
+         text-indent: 0;
+         text-wrap: pretty;
+      }
+
+
+      blockquote {
+         margin-block: var(--grid-cell-size);
+      }
+
+      blockquote::before,
+      blockquote::after {
+         font-size: 2.4rem;
+         font-weight: 900;
+         font-feature-settings: "ss05";
+      }
+
+      blockquote::before {
+
+         content: "“";
+      }
+
+      blockquote::after {
+         content: "”";
       }
 
       img {
          max-width: 100%;
          height: auto;
+      }
+
+      figure {
+         background-color: var(--nav-background-color);
+         padding: calc(var(--grid-cell-size) / 4);
+         margin-inline: auto;
+         margin-block: calc(var(--grid-cell-size) / 2);
+
+         figcaption {
+            padding-inline: calc(var(--grid-cell-size) / 4);
+            padding-block: calc(var(--grid-cell-size) / 4) calc(var(--grid-cell-size) / 2);
+            font-size: 0.875rem;
+            font-weight: 400;
+            line-height: 1.4;
+         }
       }
    }
 }
