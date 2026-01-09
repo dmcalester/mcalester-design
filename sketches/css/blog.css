@@ -9,7 +9,6 @@
    background-color: var(--content-background-color);
    color: var(--text-color);
 
-
 }
 
 article {
@@ -20,6 +19,8 @@ article {
    display: grid;
    grid-template-columns: clamp(27ch, 30%, 23.5rem) clamp(30ch, 60%, 35rem);
    grid-template-areas: "header main";
+
+
 
 
    header {
@@ -36,7 +37,7 @@ article {
          font-weight: 500;
          line-height: 1;
          margin: 0 0 calc(var(--grid-cell-size) / 10) 0;
-         text-wrap: pretty;
+
       }
 
       time {

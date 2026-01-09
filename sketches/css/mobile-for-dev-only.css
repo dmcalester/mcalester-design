@@ -1,22 +1,12 @@
-
-
 @media (max-width: 880px) {
    :root {
       --grid-cell-size: 1.5rem;
       --grid-dot-size: 1px;
 
-      --nav-height: calc(var(--grid-cell-size) * 2);
+      --nav-height: calc(var(--grid-cell-size) * 1.75);
    }
 
-   body {
-      display: grid;
-      padding: 0;
-      margin: 0;
-      grid-template-rows: 1fr var(--nav-height) auto;
-      height: 100dvh;
-
-   }
-
+   body { grid-template-rows: 1fr var(--nav-height) auto; }
 
    #header {
       position: sticky;
@@ -25,12 +15,10 @@
       grid-row: 3;
       box-shadow: none;
 
-      #masthead {
-         grid-row: 2;
-      }
+
 
       h1 {
-         font-size: 2.2rem;
+         font-size: 2.3rem;
          line-height: .9;
       }
 
@@ -41,34 +29,42 @@
       }
    }
 
-   #masthead {
-      grid-row: 5;
-   }
-
    #main-nav {
-      position: sticky;
+
       top: unset;
-      bottom: 0;
+      bottom: calc(var(--grid-cell-size) * 3);
 
       z-index: 500;
 
       grid-row: 2;
 
       height: var(--nav-height);
-      font-size: .975rem;
+      font-size: 0.975rem;
       overflow-y: auto;
-      box-shadow: 0 calc((var(--grid-cell-size) / 2) * -1) 0 var(--content-background-color);
+      box-shadow: 0 calc((var(--grid-cell-size) / 2) * -1) 0 oklch(from var(--content-background-color) l c h / .95);
 
       ul {
          height: var(--nav-height);
       }
    }
 
+   #masthead { grid-row: 2; }
+
    :where(.home) {
 
+      #main-nav {
+         grid-row: 2;
+         top: unset;
+         bottom: 0;
+         margin-left: 2px;
+         box-shadow: none;
+      }
+
       #header {
+         grid-row: 1;
          top: 0;
          bottom: unset;
+
 
 
          h1 {
@@ -83,23 +79,22 @@
          }
       }
 
-      #main-nav {
-         top: unset;
-         bottom: 0;
+      #masthead {
+         grid-row: 4 / 9;
       }
 
    }
 
 
    #playground {
-      grid-row: 15 / -3;
+      grid-row: 14 / -3;
    }
 
 
 
    #content {
       grid-row: 1;
-      overflow: auto;
+
    }
 
    article {
@@ -122,6 +117,12 @@
 
       .article-content {
          padding-block: calc(var(--grid-cell-size) / 2);
+
+         p {
+            font-size: 1.1rem;
+            line-height: 1.75;
+            margin-bottom: var(--grid-cell-size);
+         }
       }
 
 

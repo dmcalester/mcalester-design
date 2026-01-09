@@ -6,3 +6,4 @@
 @import url("playground.css");
 @import url("blog.css");
 @import url("mobile-for-dev-only.css");
+@import url("transitions.css") not (prefers-reduced-motion: reduce);

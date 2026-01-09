@@ -1,16 +1,22 @@
-// Theme toggle functionality
 const toggle = document.getElementById("toggle-theme");
-const body = document.body;
+const currentTheme = localStorage.getItem("theme");
 
-// Check for saved theme preference or default to 'light'
-const currentTheme = localStorage.getItem("theme") || "light";
-body.style.colorScheme = currentTheme;
-toggle.textContent = currentTheme === "light" ? "☀" : "☾";
+// Only override if user made a choice
+if (currentTheme) {
+   document.body.style.colorScheme = currentTheme;
+}
 
-// Toggle theme on click
+// Set toggle icon based on actual computed scheme
+toggle.textContent = getComputedStyle(document.body).colorScheme.includes(
+   "dark",
+)
+   ? "☾"
+   : "☀";
+
 toggle.addEventListener("click", () => {
-   const newTheme = body.style.colorScheme === "light" ? "dark" : "light";
-   body.style.colorScheme = newTheme;
+   const isDark = getComputedStyle(document.body).colorScheme.includes("dark");
+   const newTheme = isDark ? "light" : "dark";
+   document.body.style.colorScheme = newTheme;
    localStorage.setItem("theme", newTheme);
-   toggle.textContent = newTheme === "light" ? "☀" : "☾";
+   toggle.textContent = newTheme === "dark" ? "☾" : "☀";
 });
