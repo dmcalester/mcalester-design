@@ -1,0 +1,53 @@
+
+#main-nav {
+   position: sticky;
+   top: 0;
+   z-index: 300;
+   height: var(--grid-cell-size);
+   background-color: var(--nav-background-color);
+
+   box-shadow: 0 0 0 calc(var(--grid-cell-size) / 2) var(--content-background-color);
+
+
+
+   ul {
+      margin: 0;
+      padding: 0;
+
+      list-style: none;
+
+      align-items: center;
+      grid-column: 2 / -2;
+      display: flex;
+      flex-direction: row;
+
+   }
+
+   li {
+      font-size: 0.875rem;
+      margin-right: 1.5rem;
+
+   }
+
+   a {
+      text-decoration: none;
+      color: var(--nav-text-color);
+
+      font-weight: 500;
+
+   }
+}
+
+#toggle-theme {
+   color: var(--nav-text-color);
+   margin-left: auto;
+   font-weight: 500;
+
+   user-select: none;
+   cursor: pointer;
+}
+
+:where(.home) {
+   #main-nav {
+      box-shadow: none;
+   }

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="105px" height="70px" viewBox="0 0 105 70" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>McAlester.Design Logo</title>
+    <defs>
+        <path d="M0,0 L1920,0 L1920,1080 L0,1080 L0,0 Z" id="path-1"></path>
+    </defs>
+    <g id="Home-Page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="4-・-Large-Copy" transform="translate(-52, -204)" xlink:href="#path-1">
+            <path stroke="#000000" d="M1919.5,1079.5 L0.500001048,1079.5 L0.500001048,0.500001571 L1919.5,0.500001571 Z" stroke-linejoin="square"></path>
+            <g id="Group" fill-rule="evenodd" transform="translate(52, 204)">
+                <circle id="Oval-2" fill="#FFFFFF" cx="8.75" cy="8.75" r="8.75"></circle>
+                <circle id="Oval-2-Copy" fill="#FFFFFF" cx="35" cy="8.75" r="8.75"></circle>
+                <circle id="Oval-2-Copy-2" fill="#FFFFFF" cx="35" cy="35" r="8.75"></circle>
+                <circle id="Oval-2-Copy-3" stroke="#FFFFFF" cx="35" cy="61.25" r="8.25"></circle>
+                <circle id="Oval-2-Copy-11" stroke="#FFFFFF" cx="8.75" cy="35" r="8.25"></circle>
+                <circle id="Oval-2-Copy-10" stroke="#FFFFFF" cx="8.75" cy="61.25" r="8.25"></circle>
+                <circle id="Oval-2-Copy-6" fill="#FFFFFF" cx="70" cy="8.75" r="8.75"></circle>
+                <circle id="Oval-2-Copy-7" fill="#FFFFFF" cx="96.25" cy="8.75" r="8.75"></circle>
+                <circle id="Oval-2-Copy-5" stroke="#FFFFFF" cx="70" cy="35" r="8.25"></circle>
+                <circle id="Oval-2-Copy-4" fill="#FFFFFF" cx="70" cy="61.25" r="8.75"></circle>
+                <circle id="Oval-2-Copy-9" stroke="#FFFFFF" cx="96.25" cy="35" r="8.25"></circle>
+                <circle id="Oval-2-Copy-8" stroke="#FFFFFF" cx="96.25" cy="61.25" r="8.25"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

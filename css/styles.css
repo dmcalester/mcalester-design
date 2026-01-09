@@ -1,10 +1,11 @@
 body {
-   background-image: 
+   background-image:
       radial-gradient(circle at center, #ccc 4px, transparent 4px),
       linear-gradient(to right, #ccc 1px, transparent 1px),
       linear-gradient(to bottom, #ccc 1px, transparent 1px);
    background-size: 100px 100px;
    background-position: 50px 50px, 0 0, 0 0;
+   overscroll-behavior: none;
 }
 
 article {

@@ -1,0 +1,112 @@
+
+*,
+*::before,
+*::after {
+   box-sizing: border-box;
+}
+
+::selection {
+   background-color: var(--key-color);
+   color: var(--text-color);
+}
+
+
+@view-transition {
+   navigation: auto;
+}
+
+html {
+   overscroll-behavior: none;
+}
+
+body {
+   color-scheme: light dark;
+
+   display: grid;
+   grid-template-rows: var(--grid-cell-size) 1fr auto;
+   height: 100dvh;
+   width: 100dvw;
+
+
+   padding: 0;
+   margin: 0;
+
+   font-family: "Graphik", "Avenir", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+   background-color: var(--content-background-color);
+}
+
+:where(h1, h2, h3) {
+   text-wrap: pretty;
+}
+
+:where(#header, #playground, #main-nav) {
+   display: grid;
+   grid-column: 1 / -1;
+   grid-template-columns: repeat(auto-fill, var(--grid-cell-size));
+   grid-template-rows: repeat(auto-fill, var(--grid-cell-size));
+}
+
+#content {
+   grid-row: 2;
+   grid-column: 1 / -1;
+   padding: var(--grid-cell-size);
+   background-color: var(--content-background-color);
+   color: var(--text-color);
+}
+
+
+a {
+   text-decoration: underline;
+   text-decoration-thickness: 2px;
+   text-underline-offset: 2px;
+   text-decoration-color: var(--text-color);
+   color: var(--text-color);
+
+}
+
+a:hover {
+   text-decoration: underline;
+   text-decoration-color: red;
+   text-decoration-thickness: 1px;
+   color: black;
+
+}
+
+#playground {
+   display: grid;
+   grid-template-columns: subgrid;
+   grid-template-rows: subgrid;
+   grid-row: 7 / -2;
+   grid-column: 2 / -2;
+
+
+   background-color: light-dark(
+      oklch(from var(--key-color) calc(l - .1) calc(c - .02) h),
+      oklch(from var(--key-color) calc(l - .1) calc(c - .02) h));
+
+
+   background-image:
+      radial-gradient(circle at center, var(--grid-dot-color) var(--grid-dot-size), transparent var(--grid-dot-size));
+   background-size: var(--grid-cell-size) var(--grid-cell-size);
+   background-position: var(--grid-dot-position) var(--grid-dot-position);
+}
+
+
+@media (max-width: var(--mobile-width)) {
+   body {
+      grid-template-rows: 1fr auto auto;
+   }
+
+   #content {
+      grid-row: 1;
+   }
+
+   #main-nav {
+      grid-row: 2;
+   }
+
+   #header {
+      grid-row: 3;
+   }
+}
