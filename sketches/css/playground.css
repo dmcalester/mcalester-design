@@ -7,7 +7,7 @@
 
 
    background-color: light-dark(
-      oklch(from var(--key-color) calc(l - .1) calc(c - .02) h),
+      oklch(from var(--key-color) calc(l + .2) calc(c + .04) h),
       oklch(from var(--key-color) calc(l - .1) calc(c - .02) h));
 
 

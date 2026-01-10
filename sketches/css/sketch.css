@@ -29,11 +29,11 @@ html::after {
    height: 200%;
    /*background-image: linear-gradient(to bottom, var(--content-background-color) 0%, var(--content-background-color) 50% var(--key-color) 100%);*/
 
-   background-color: var(--key-color);
+   background-color: oklch(from var(--key-color) calc(l - .1) c h);
    background-image: var(--dot-grid);
    background-size: var(--grid-cell-size) var(--grid-cell-size);
    background-position: var(--grid-dot-position) var(--grid-dot-position);
-   z-index: -1;
+   z-index: var(--z-background);
 }
 
 
@@ -50,11 +50,13 @@ body {
    margin: 0;
 
    font-family: "Graphik", "Avenir", "Helvetica Neue", Helvetica, Arial, sans-serif;
+   font-feature-settings: "ss05";
 
    background-color: var(--content-background-color);
 }
 
 :where(h1, h2, h3, blockquote) {
+   font-feature-settings: "ss05";
    text-wrap: pretty;
 }
 
@@ -73,19 +75,38 @@ body {
 }
 
 
-a {
-   text-decoration: underline;
-   text-decoration-thickness: 2px;
-   text-underline-offset: 2px;
-   text-decoration-color: var(--text-color);
-   color: var(--text-color);
-
+:where(b, strong) {
+   font-weight: var(--font-weight-medium);
 }
 
-a:hover {
+:where(i, em) {
+   font-weight: var(--font-weight-medium);
+}
+
+sup {
+   all: unset;
+}
+
+a {
    text-decoration: underline;
+   text-decoration-thickness: var(--underline-thickness);
+   text-underline-offset: var(--underline-offset);
    text-decoration-color: var(--key-color);
-   text-decoration-thickness: 1px;
    color: var(--text-color);
 
+
+   &:hover {
+      text-decoration: underline;
+      text-decoration-color: var(--key-color);
+      text-decoration-thickness: 2px;
+      color: var(--text-color);
+
+   }
+
+   /* Special handling for article footnotes */
+   &:has(sup),
+   &.return {
+      color: var(--key-color);
+      text-decoration: none;
+   }
 }
