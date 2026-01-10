@@ -1,0 +1,74 @@
+
+:root {
+   --key-color: oklch(0.6379 0.2484 31.02);
+   --black: oklch(.05 0 0);
+   --white: oklch(.975 0 0);
+
+   --content-background-color: light-dark(var(--white), oklch(from var(--black) calc(l + .15) c h));
+   --text-color: light-dark(var(--black), var(--white));
+   --masthead-text-color: light-dark(var(--white), var(--black));
+
+
+   --nav-background-color: light-dark(
+      oklch(from var(--white) calc(l - .075) c h),
+      oklch(from var(--black) calc(l + .2) c h));
+   --nav-text-color: light-dark(var(--black), var(--white));
+
+   --grid-light: oklch(from var(--key-color) calc(1 + .0175) c h);
+   --grid-dark: oklch(from var(--key-color) calc(1 - .775) c h);
+
+
+
+   --grid-line-width: 1px;
+   --grid-line-color: light-dark(var(--grid-light), var(--grid-dark));
+   --grid-dot-color: light-dark(var(--grid-light), var(--grid-dark));
+   --grid-cell-size: 48px;
+   --grid-dot-size: 2px;
+   --grid-dot-position: calc((var(--grid-cell-size) + var(--grid-line-width)) / 2);
+   --dot-grid: radial-gradient(circle at center, var(--grid-dot-color) var(--grid-dot-size), transparent var(--grid-dot-size));
+
+
+   --content-border-color: oklch(from var(--text-color) l c h / .2);
+   --content-border-width: calc(var(--grid-cell-size) / 15);
+
+   /* Spacing scale (grid-relative) */
+   --spacing-eigth: calc(var(--grid-cell-size) / 8);
+   --spacing-quarter: calc(var(--grid-cell-size) / 4);
+   --spacing-half: calc(var(--grid-cell-size) / 2);
+   --spacing-full: var(--grid-cell-size);
+   --spacing-double: calc(var(--grid-cell-size) * 2);
+   --spacing-triple: calc(var(--grid-cell-size) * 3);
+
+   /* Typography - sizes */
+   --font-size-small: 0.875rem;
+   --font-size-body: 0.975rem;
+   --font-size-medium: 1.1rem;
+   --font-size-large: 1.3rem;
+   --font-size-heading: calc(var(--grid-cell-size) * 1.4);
+
+   /* Typography - weights */
+   /*--font-weight-thin: 100;*/
+   --font-weight-regular: 400;
+   --font-weight-medium: 500;
+   --font-weight-bold: 700;
+   /*--font-weight-black: 900;*/
+
+   /* Typography - line heights */
+   --line-height-tight: 1;
+   --line-height-normal: 1.3;
+   --line-height-relaxed: 1.4;
+
+   /* Z-index scale */
+   --z-background: -1;
+   --z-header: 200;
+   --z-nav: 300;
+   --z-overlay: 500;
+
+   /* Animation timing */
+   --duration-normal: 0.3s;
+   --duration-slow: 1.3s;
+
+   /* Text decoration */
+   --underline-thickness: 1px;
+   --underline-offset: 2px;
+}

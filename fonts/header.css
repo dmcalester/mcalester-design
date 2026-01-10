@@ -1,0 +1,112 @@
+
+#header {
+   position: sticky;
+   top: auto;
+   bottom: 0;
+   height: var(--spacing-triple); /* interior pages default */
+
+
+   /* shared */
+   grid-row: 3;
+   grid-template-rows: repeat(auto-fill, var(--grid-cell-size));
+
+   color: var(--text-color); /* this might need a variant */
+
+   z-index: var(--z-header);
+   view-transition-name: header; /* duplicate */
+
+   background-color: light-dark(var(--key-color), oklch(from var(--black) calc(l + .1) c h));
+
+   box-shadow: 0 calc(var(--spacing-half) * -1) 0 var(--content-background-color);
+
+}
+
+
+#masthead {
+   grid-row: 2;
+   grid-column: 2 / -2;
+
+   border: none;
+   grid-template-columns: subgrid;
+   grid-template-rows: subgrid;
+   color: var(--masthead-text-color);
+
+   h1 {
+
+      margin: 0 0 var(--spacing-quarter) calc(var(--grid-cell-size) * -0.095);
+
+      padding: 0;
+      line-height: var(--line-height-tight);
+      text-box-edge: cap alphabetic;
+      text-box-trim: trim-both;
+      font-size: var(--font-size-heading);
+      font-weight: var(--font-weight-bold);
+
+
+      /*view-transition-name: masthead;*/
+      color: var(--white);
+
+      .section {
+         view-transition-name: masthead-span;
+      }
+
+      .site::after {
+         content: ".";
+
+         margin-inline: -.06ch -.25ch;
+         color: light-dark(var(--black), var(--key-color));
+      }
+   }
+}
+
+:where(.home) {
+
+   --nav-background-color: light-dark(
+      var(--key-color),
+      var(--key-color));
+   --nav-text-color: var(--masthead-text-color);
+
+   #header {
+      position: relative;
+
+      height: calc(100cqh - var(--grid-cell-size));
+      background-color: var(--key-color);
+      box-shadow: none;
+   }
+
+   #masthead {
+      grid-row: 3;
+
+      h1 {
+         font-size: var(--font-size-heading);
+         color: var(--masthead-text-color);
+
+         .site::after {
+            color: light-dark(var(--black), var(--white));
+         }
+      }
+
+
+      h2 {
+         margin: 0;
+         padding-top: .5rem;
+         width: clamp(28ch, 66%, 42ch);
+         color: var(--masthead-text-color);
+
+         font-weight: var(--font-weight-regular);
+         font-size: var(--font-size-medium);
+         letter-spacing: -0.02em;
+         line-height: var(--line-height-normal);
+
+      }
+   }
+}
+
+
+@media (max-width: 800px) {
+   :where(.home) {
+      #header {
+
+      }
+   }
+}
