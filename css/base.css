@@ -56,7 +56,6 @@ body {
 }
 
 :where(h1, h2, h3, blockquote) {
-   font-feature-settings: "ss05";
    text-wrap: pretty;
 }
 

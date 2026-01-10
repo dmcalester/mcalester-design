@@ -125,13 +125,13 @@
 
          h1 {
             font-size: 4rem;
-            line-height: .9;
+            line-height: 0.9;
          }
 
          h2 {
             font-weight: var(--font-weight-medium);
             margin-top: 1rem;
-            font-size: 1.05em;
+            font-size: var(--font-size-medium);
          }
       }
 

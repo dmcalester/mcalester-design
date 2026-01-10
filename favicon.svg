@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="180px" height="180px" viewBox="0 0 180 180" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Duncan.McAlester</title>
+    <style>
+      .circle {  stroke: #fff; fill: none; }
+      .fill { fill: #fff; }
+
+      @media (prefers-color-scheme: dark) {
+      .circle { stroke: #000; fill: none; }
+      .fill { fill: #000; }
+      }
+  </style>
+    <defs>
+        <path d="M0,0 L180,0 L180,180 L0,180 L0,0 Z" id="path-1"></path>
+    </defs>
+    <g id="Icons" stroke="none" fill="none" xlink:href="#path-1" fill-rule="evenodd">
+        <use fill="#FF2400" xlink:href="#path-1"></use>
+        <g id="Group" stroke-width="1" transform="translate(37, 55)">
+            <circle id="o1"  class="circle fill" cx="8.75" cy="8.75" r="8.75"></circle>
+            <circle id="o2"  class="circle fill" cx="35" cy="8.75" r="8.75"></circle>
+            <circle id="o3"  class="circle" cx="8.75" cy="35" r="8.25"></circle>
+            <circle id="o4"  class="circle fill" cx="35" cy="35" r="8.75"></circle>
+            <circle id="o5"  class="circle" cx="8.75" cy="61.25" r="8.25"></circle>
+            <circle id="o6"  class="circle" cx="35" cy="61.25" r="8.25"></circle>
+
+            <circle id="o7"  class="circle fill" cx="70" cy="8.75" r="8.75"></circle>
+            <circle id="o8"  class="circle fill" cx="96.25" cy="8.75" r="8.75"></circle>
+            <circle id="o9"  class="circle" cx="70" cy="35" r="8.25"></circle>
+            <circle id="o10" class="circle" cx="96.25" cy="35" r="8.25"></circle>
+            <circle id="o11" class="circle fill" cx="70" cy="61.25" r="8.75"></circle>
+            <circle id="o12" class="circle" cx="96.25" cy="61.25" r="8.25"></circle>
+        </g>
+    </g>
+</svg>

@@ -31,8 +31,10 @@
    --content-border-color: oklch(from var(--text-color) l c h / .2);
    --content-border-width: calc(var(--grid-cell-size) / 15);
 
+   --shadow-color: oklch(from var(--content-background-color) l c h / .95);
+
    /* Spacing scale (grid-relative) */
-   --spacing-eigth: calc(var(--grid-cell-size) / 8);
+   --spacing-eighth: calc(var(--grid-cell-size) / 8);
    --spacing-quarter: calc(var(--grid-cell-size) / 4);
    --spacing-half: calc(var(--grid-cell-size) / 2);
    --spacing-full: var(--grid-cell-size);

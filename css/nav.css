@@ -7,7 +7,7 @@
 
    height: var(--grid-cell-size);
    background-color: var(--nav-background-color);
-   box-shadow: 0 calc(var(--grid-cell-size) / 12) 0 calc(var(--grid-cell-size) / 12) oklch(from var(--content-background-color) l c h / .95);
+   box-shadow: 0 calc(var(--grid-cell-size) / 12) 0 calc(var(--grid-cell-size) / 12) var(--shadow-color);
 
    font-size: var(--font-size-small);
    font-weight: var(--font-weight-medium);
@@ -72,7 +72,7 @@
       height: var(--nav-height);
       font-size: var(--font-size-body);
       overflow-y: auto;
-      box-shadow: 0 calc(var(--spacing-half) * -1) 0 oklch(from var(--content-background-color) l c h / .95);
+      box-shadow: 0 calc(var(--spacing-half) * -1) 0 var(--shadow-color);
 
       ul {
          height: var(--nav-height);

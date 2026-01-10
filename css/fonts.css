@@ -40,13 +40,8 @@
    font-display: swap;
 }
 
-@font-feature-values Font Graphik {
-  font-display: swap;
-  @styleset {
-    rounded-quotes: ss05;
-  }
-
-  @styleset {
-    tabular-numbers: ss05;
+@font-feature-values Graphik {
+  @stylistic {
+    rounded-quotes: 5;
   }
 }
