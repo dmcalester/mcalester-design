@@ -1,5 +1,6 @@
 
 #main-nav {
+   grid-row: 1;
 
    position: sticky;
    top: 0;
@@ -76,6 +77,19 @@
 
       ul {
          height: var(--nav-height);
+      }
+   }
+
+   :where(.home) {
+
+
+
+      #main-nav {
+         grid-row: 2;
+         top: unset;
+         bottom: 0;
+         margin-left: 2px;
+         box-shadow: none;
       }
    }
 

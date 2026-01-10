@@ -14,7 +14,7 @@
    background-size: var(--grid-cell-size) var(--grid-cell-size);
    background-position: var(--grid-dot-position) var(--grid-dot-position);
 
-   border: var(--spacing-full) solid var(--playground-bg);
+
 }
 
 

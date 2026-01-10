@@ -122,7 +122,7 @@ a {
 
    html:has(body.home) {
       height: 100dvh;
-      overflow: hidden;
+      /*overflow: hidden;*/
       /*overscroll-behavior: none;*/
    }
 }
