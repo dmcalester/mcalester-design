@@ -96,35 +96,52 @@ article {
 
 
       blockquote {
-         outline: 1px dotted red;
-         margin-block: var(--spacing-half);
-         margin-inline: var(--spacing-half);
-         font-style: italic;
+         /*outline: 1px dotted purple;*/
+         position: relative;
 
+         font-style: italic;
+         font-size: calc(var(--font-size-body) * 1.2);
+         margin: var(--spacing-half) var(--spacing-full) var(--spacing-half);
+         font-weight: var(--font-weight-medium);
+
+         background-color: var(--nav-background-color);
+         padding: var(--spacing-half);
+
+         z-index: 20;
       }
 
       blockquote::before,
       blockquote::after {
-         font-size: 3rem;
-         font-weight: var(--font-weight-medium);
+         position: absolute;
 
+         font-size: 10rem;
+         font-weight: var(--font-weight-medium);
+         color: var(--key-color);
          font-feature-settings: "ss05";
+         padding: 0;
+
+         text-box-edge: cap alphabetic;
+         text-box-trim: trim-both;
+         z-index: 10;
 
       }
 
       blockquote::before {
          content: "“";
+         top: 3rem;
+         left: -4.75rem;
       }
 
       blockquote::after {
          content: "”";
+         bottom: -1.95rem;
+         right: -3.75rem;
       }
 
       sup {
          vertical-align: normal;
          font-size: var(--font-size-regular);
          font-feature-settings: "sups";
-
       }
 
       img {
