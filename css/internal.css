@@ -178,7 +178,7 @@ article {
 
    display: grid;
    grid-template-columns: var(--spacing-half) 1fr;
-   gap: var(--spacing-half) var(--spacing-quarter);
+   gap: var(--spacing-half) var(--spacing-half);
    align-items: center;
    width: 100%;
    font-size: var(--font-size-small);
@@ -191,8 +191,14 @@ article {
    }
 
    dt {
-      width: var(--spacing-half);
-      aspect-ratio: 1;
+      display: flex;
+      align-items: center;
+
+
+      svg {
+         width: var(--spacing-half);
+         aspect-ratio: 1/1;
+      }
 
    }
 
