@@ -17,7 +17,8 @@
 
    background-color: light-dark(var(--key-color), oklch(from var(--black) calc(l + .1) c h));
 
-   box-shadow: 0 calc(var(--spacing-half) * -1) 0 var(--content-background-color);
+   /*box-shadow: 0 calc(var(--spacing-half) * -1) 0 var(--content-background-color);*/
+
 
 }
 
@@ -49,7 +50,7 @@
       color: var(--white);
 
       .section {
-         view-transition-name: masthead-span;
+         /*view-transition-name: masthead-span;*/
       }
 
       .site::after {
@@ -75,6 +76,7 @@
       height: calc(100cqh - var(--grid-cell-size));
       background-color: var(--key-color);
       box-shadow: none;
+      transition: box-shadow 0s;
 
    }
 

@@ -1,0 +1,33 @@
+
+@view-transition {
+   navigation: auto;
+}
+
+
+::view-transition-old(header),
+::view-transition-new(header) {
+   animation: none;
+}
+
+/*::view-transition-old(masthead) {
+   animation-name: old-out;
+   animation-duration: 4s;
+}
+
+::view-transition-new(masthead) {
+   animation-name: new-in;
+   animation-duration: 4s;
+}*/
+
+::view-transition-group(header) {
+   transform: height(100%);
+   animation-duration: .67s;
+}
+
+/*::view-transition-old(masthead-span) {
+
+}
+
+::view-transition-new(masthead-span) {
+
+}*/

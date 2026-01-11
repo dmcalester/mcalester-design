@@ -5,3 +5,4 @@
 @import url("nav.css");
 @import url("header.css");
 @import url("playground.css");
+@import url("transitions.css") not (prefers-reduced-motion: reduce);
