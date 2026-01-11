@@ -240,7 +240,8 @@ article {
 
       header {
          border-top: calc(var(--content-border-width) * 2) solid var(--content-border-color);
-
+         margin-bottom: 0;
+         padding-bottom: 0;
          h1 {
             font-size: 2rem;
             line-height: 1.1;
@@ -252,11 +253,18 @@ article {
 
       .socials {
 
+
          grid-template-columns: var(--spacing-full) 1fr;
-         gap: var(--spacing-half) var(--spacing-full);
+         gap: var(--spacing-full) var(--spacing-full);
          font-size: var(--font-size-regular);
 
+            padding: 0;
+            /*outline: 1px solid red;*/
+            padding-top: var(--spacing-full);
+
+
          dt {
+            margin-left: var(--spacing-quarter);
             width: var(--spacing-full);
             svg {
                width: var(--spacing-full);
