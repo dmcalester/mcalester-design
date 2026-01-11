@@ -106,6 +106,10 @@
       ul {
          height: var(--nav-height);
       }
+
+      li {
+         margin-right: var(--spacing-full);
+      }
    }
 
    :where(.home) {

@@ -31,6 +31,7 @@
    grid-template-rows: subgrid;
    color: var(--masthead-text-color);
 
+
    h1 {
 
       margin: 0 0 var(--spacing-quarter) calc(var(--grid-cell-size) * -0.095);
@@ -41,6 +42,7 @@
       text-box-trim: trim-both;
       font-size: var(--font-size-heading);
       font-weight: var(--font-weight-bold);
+      user-select: none;
 
 
       /*view-transition-name: masthead;*/
@@ -55,6 +57,7 @@
 
          margin-inline: -.06ch -.25ch;
          color: light-dark(var(--black), var(--key-color));
+         cursor: pointer;
       }
    }
 }
@@ -72,10 +75,12 @@
       height: calc(100cqh - var(--grid-cell-size));
       background-color: var(--key-color);
       box-shadow: none;
+
    }
 
    #masthead {
       grid-row: 3;
+
 
       h1 {
          font-size: var(--font-size-heading);

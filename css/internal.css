@@ -20,7 +20,12 @@ article {
          font-size: calc(var(--grid-cell-size) / 1.5);
          font-weight: var(--font-weight-regular);
          line-height: var(--line-height-tight);
-         margin: 0 0 calc(var(--grid-cell-size) / 10) 0;
+         /*margin: 0 0 calc(var(--grid-cell-size) / 10) 0;*/
+
+         margin: 0;
+         text-box-edge: cap alphabetic;
+         text-box-trim: trim-both;
+
 
       }
 
@@ -49,16 +54,25 @@ article {
          padding: 0;
       }
 
+      p:first-child {
+
+         margin: 0;
+         text-box-edge: cap alphabetic;
+         text-box-trim: trim-both;
+      }
+
       ul {
          margin-left: var(--spacing-half);
          /*list-style-type: none;
          list-style-position: outside;*/
 
-
+         li {
+            margin-bottom: var(--spacing-quarter);
+            line-height: var(--line-height-normal);
+         }
 
          li::marker {
             color: var(--key-color);
-
          }
       }
 
@@ -180,7 +194,8 @@ article {
       align-items: center;
       width: 100%;
       font-size: var(--font-size-small);
-      padding-top: var(--spacing-quarter);
+      padding-top: var(--spacing-full);
+      margin-top: var(--spacing-half);
 
       dt, dd {
          margin: 0;
@@ -227,9 +242,9 @@ article {
          border-top: calc(var(--content-border-width) * 2) solid var(--content-border-color);
 
          h1 {
-            font-size: var(--font-size-large);
+            font-size: 2rem;
             line-height: 1.1;
-            margin: 0 0 calc(var(--grid-cell-size) / 15) 0;
+            /*margin: 0 0 calc(var(--grid-cell-size) / 15) 0;*/
 
          }
       }
@@ -239,6 +254,8 @@ article {
 
          grid-template-columns: var(--spacing-full) 1fr;
          gap: var(--spacing-half) var(--spacing-full);
+         font-size: var(--font-size-regular);
+
          dt {
             width: var(--spacing-full);
             svg {
@@ -250,8 +267,11 @@ article {
 
 
       .article-content {
-         padding-block: var(--spacing-half);
+         padding-block: var(--spacing-full);
 
+         ul {
+            margin-left: var(--spacing-full);
+         }
 
       }
    }
