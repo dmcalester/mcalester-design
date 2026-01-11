@@ -24,23 +24,51 @@
       grid-column: 2 / -2;
       display: flex;
       flex-direction: row;
-      align-items: center;
+      align-items: stretch;
 
 
    }
 
    li {
-      margin-right: 1.5rem;
 
+      margin-right: var(--spacing-half);
+      display: flex;
+      align-items: center;
 
       text-box-edge: cap alphabetic;
       text-box-trim: trim-both;
 
+      align-items: center;
    }
 
    a {
       text-decoration: none;
+
       color: var(--nav-text-color);
+   }
+}
+
+[data-section="about"] {
+   li.about {
+      box-shadow: inset 0 -3px 0 var(--key-color);
+   }
+}
+
+[data-section="blog"] {
+   li.blog {
+      box-shadow: inset 0 -3px 0 var(--key-color);
+   }
+}
+
+[data-section="work"] {
+   li.work {
+      box-shadow: inset 0 -3px 0 var(--key-color);
+   }
+}
+
+[data-section="colophon"] {
+   li.colophon {
+      box-shadow: inset 0 -3px 0 var(--key-color);
    }
 }
 
@@ -77,6 +105,10 @@
 
       ul {
          height: var(--nav-height);
+      }
+
+      li {
+         margin-right: var(--spacing-full);
       }
    }
 

@@ -70,6 +70,7 @@ body {
    grid-row: 2;
    grid-column: 1 / -1;
    padding: var(--grid-cell-size);
+   background-color: var(--content-background-color);
    color: var(--text-color);
 }
 
@@ -124,5 +125,9 @@ a {
       height: 100dvh;
       /*overflow: hidden;*/
       /*overscroll-behavior: none;*/
+   }
+
+   #content {
+      grid-row: 1;
    }
 }
