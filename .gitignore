@@ -4,6 +4,9 @@
 # environment variables
 *.env*
 
+# binaries
+*.zip
+
 # macOS-specific files
 .DS_Store
 

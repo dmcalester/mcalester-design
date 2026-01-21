@@ -10,11 +10,16 @@
    grid-column: 2 / -2;
 
    background-color: var(--playground-bg);
-   background-image: var(--dot-grid);
-   background-size: var(--grid-cell-size) var(--grid-cell-size);
-   background-position: var(--grid-dot-position) var(--grid-dot-position);
+   position: relative;
+   overflow: hidden;
+}
 
-
+#playground canvas {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
 }
 
 

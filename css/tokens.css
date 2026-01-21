@@ -27,6 +27,12 @@
    --grid-dot-position: calc((var(--grid-cell-size) + var(--grid-line-width)) / 2);
    --dot-grid: radial-gradient(circle at center, var(--grid-dot-color) var(--grid-dot-size), transparent var(--grid-dot-size));
 
+   /* LightTrail experiment aliases */
+   --dot-size: var(--grid-dot-size);
+   --dot-color: var(--grid-dot-color);
+   --line-color: var(--grid-dot-color);
+   --fill-color: var(--grid-dot-color);
+
 
    --content-border-color: oklch(from var(--text-color) l c h / .2);
    --content-border-width: calc(var(--grid-cell-size) / 15);
