@@ -1,0 +1,198 @@
+
+
+
+#content {
+   grid-row: 2;
+   grid-column: 1 / -1;
+
+
+   background-color: var(--content-background-color);
+   color: var(--text-color);
+
+}
+
+article {
+   padding: 0;
+   margin: 0 0 var(--spacing-double) 0;
+   gap: var(--spacing-full);
+
+   display: grid;
+   grid-template-columns: clamp(27ch, 30%, 23.5rem) clamp(30ch, 60%, 35rem);
+   grid-template-areas: "header main";
+
+   header {
+      grid-area: header;
+      line-height: var(--line-height-tight);
+      padding-block: var(--spacing-half);
+      margin: 0;
+
+      border-top: var(--content-border-width) solid var(--content-border-color);
+
+      h1 {
+
+         font-size: calc(var(--grid-cell-size) / 1.5);
+         font-weight: var(--font-weight-regular);
+         line-height: var(--line-height-tight);
+         margin: 0 0 calc(var(--grid-cell-size) / 10) 0;
+
+      }
+
+      time {
+         font-size: var(--font-size-small);
+
+         color: oklch(from var(--black) calc(l + .5) c h );
+
+      }
+   }
+
+   .article-content {
+
+      --line-height: 25px;
+      border-top: var(--content-border-width) solid var(--content-border-color);
+      grid-area: main;
+      padding-block: var(--spacing-half);
+
+
+
+
+      blockquote, ul, li, p, dl, figcaption {
+         margin-block-end: calc(var(--grid-cell-size) / var(--line-height));
+         line-height: var(--line-height);
+         letter-spacing: 0.025em;
+         font-size: var(--font-size-body);
+         font-weight: var(--font-weight-regular);
+
+         padding: 0;
+      }
+
+      ol {
+         margin: 0;
+
+         li {
+            font-variant-numeric: lining-nums;
+         }
+      }
+
+
+      dl {
+
+      }
+
+      dt {
+         font-weight: var(--font-weight-medium);
+         line-height: var(--line-height-normal);
+
+      }
+
+      dd {
+         margin: 0 0 1rem 0;
+         padding: 0;
+         text-indent: 0;
+         text-wrap: pretty;
+      }
+
+
+      blockquote {
+         /*outline: 1px dotted purple;*/
+         position: relative;
+
+         font-style: italic;
+         font-size: calc(var(--font-size-body) * 1.2);
+         margin: var(--spacing-half) var(--spacing-full) var(--spacing-half);
+         font-weight: var(--font-weight-medium);
+
+         background-color: var(--nav-background-color);
+         padding: var(--spacing-half);
+
+         z-index: 20;
+      }
+
+      blockquote::before,
+      blockquote::after {
+         position: absolute;
+
+         font-size: 10rem;
+         font-weight: var(--font-weight-medium);
+         color: var(--key-color);
+         font-feature-settings: "ss05";
+         padding: 0;
+
+         text-box-edge: cap alphabetic;
+         text-box-trim: trim-both;
+         z-index: 10;
+
+      }
+
+      blockquote::before {
+         content: """;
+         top: 3rem;
+         left: -4.75rem;
+      }
+
+      blockquote::after {
+         content: """;
+         bottom: -1.95rem;
+         right: -3.75rem;
+      }
+
+      sup {
+         vertical-align: normal;
+         font-size: var(--font-size-regular);
+         font-feature-settings: "sups";
+      }
+
+      img {
+         max-width: 100%;
+         height: auto;
+      }
+
+      figure {
+         background-color: var(--nav-background-color);
+         padding: var(--spacing-quarter);
+         margin-inline: auto;
+         margin-block: var(--spacing-half);
+
+         figcaption {
+            padding-inline: var(--spacing-quarter);
+            padding-block: var(--spacing-quarter) var(--spacing-half);
+            font-size: var(--font-size-small);
+            line-height: var(--line-height-relaxed);
+         }
+      }
+
+      footer {
+         border-top: 1px solid var(--content-border-color);
+
+         margin-block-start: var(--spacing-full);
+         padding: var(--spacing-quarter) 0 0 0;
+
+         ol {
+            padding-inline-start: var(--spacing-half);
+         }
+
+         li {
+            font-size: var(--font-size-small);
+            line-height: var(--line-height-normal);
+         }
+
+         .return {
+            margin-left: .25rem;
+            vertical-align: -.25rem;
+         }
+      }
+   }
+}
+
+
+
+
+@media (max-width: 800px) {
+
+   /*body {
+      grid-template-rows: 1fr auto auto;
+   }*/
+
+
+
+
+}
