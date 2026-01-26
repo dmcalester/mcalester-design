@@ -1,12 +1,30 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Blog</title>
-    <link rel="stylesheet" href="/css/styles.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>McAlester.Thoughts</title>
+   <link rel="stylesheet" href="/css/site.css">
+   <link rel="alternate" type="application/rss+xml" title="McAlester.Thoughts RSS" href="/thoughts/feed.xml">
 </head>
 <body>
+   <header id="header">
+      <div id="masthead">
+         <h1><span class="site">McAlester</span><span class="section"> Thoughts</span></h1>
+      </div>
+   </header>
+
+   <main id="content">
 {{articles}}
+   </main>
+
+   <nav id="main-nav">
+      <ul>
+         <li><a href="/">Home</a></li>
+         <li><a href="/about.html">About</a></li>
+         <li><a href="/thoughts/">Thoughts</a></li>
+      </ul>
+   </nav>
+   <script src="/js/md.js"></script>
 </body>
 </html>

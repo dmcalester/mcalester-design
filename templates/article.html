@@ -1,21 +1,38 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>{{title}}</title>
-    <link rel="stylesheet" href="/css/styles.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>{{title}} - McAlester.Thoughts</title>
+   <link rel="stylesheet" href="/css/site.css">
 </head>
-<body>
-   <article id="{{slug}}">
-     <header>
-       <h1>{{title}}</h1>
-       <time datetime="{{datetime}}">{{humanDate}}</time>
-     </header>
+<body data-section="thoughts">
+   <header id="header">
+      <div id="masthead">
+         <h1><span class="site">McAlester</span><span class="section"> Thoughts</span></h1>
+      </div>
+   </header>
 
+   <main id="content">
+      <article id="{{slug}}">
+         <header>
+            <h1>{{title}}</h1>
+            <time datetime="{{datetime}}">{{humanDate}}</time>
+         </header>
+         <div class="article-content">
 {{content}}
-
 {{footer}}
-   </article>
+         </div>
+      </article>
+   </main>
+
+   <nav id="main-nav">
+      <ul>
+         <li><a href="/">Home</a></li>
+         <li><a href="/about.html">About</a></li>
+         <li class="thoughts"><a href="/thoughts/">Thoughts</a></li>
+      </ul>
+   </nav>
+   <script src="/js/md.js"></script>
 </body>
 </html>
