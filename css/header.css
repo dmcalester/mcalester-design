@@ -66,6 +66,11 @@
    }
 }
 
+:where([data-section="thoughts"]) {
+   .section {
+      margin-left: calc(var(--spacing-eighth) * -1);
+   }
+}
 :where(.home) {
 
    --nav-background-color: light-dark(
@@ -96,6 +101,7 @@
          .site::after {
             color: light-dark(var(--black), var(--white));
          }
+
       }
 
 
