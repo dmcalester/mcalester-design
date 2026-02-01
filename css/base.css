@@ -113,7 +113,8 @@ a {
 
 @media (max-width: 880px) {
    :root {
-      --grid-cell-size: calc(100dvw / 16);
+      /*--grid-cell-size: calc(100dvw / 16);*/
+      --grid-cell-size: 24px;
       --grid-dot-size: 1px;
 
       --nav-height: calc(var(--grid-cell-size) * 1.75);
