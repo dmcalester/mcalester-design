@@ -44,7 +44,6 @@ article {
 
       time {
          font-size: var(--font-size-small);
-
          color: oklch(from var(--black) calc(l + .5) c h );
 
       }

@@ -20,12 +20,16 @@ article {
          font-size: calc(var(--grid-cell-size) / 1.5);
          font-weight: var(--font-weight-regular);
          line-height: var(--line-height-tight);
-         /*margin: 0 0 calc(var(--grid-cell-size) / 10) 0;*/
 
-         margin: 0;
+
+         margin: 0 0 var(--spacing-half) 0;
          text-box-edge: cap alphabetic;
          text-box-trim: trim-both;
 
+         a {
+            text-decoration: none;
+
+         }
 
       }
 
@@ -279,6 +283,11 @@ article {
 
          ul {
             margin-left: var(--spacing-full);
+         }
+
+         blockquote {
+            width: 66%;
+            margin: auto;
          }
 
       }

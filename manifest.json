@@ -1,10 +1,18 @@
 {
-  "last_published": "2026-01-26T16:25:06.213808+00:00",
+  "last_published": "2026-02-10T16:21:03.660715+00:00",
   "notes": {
+    "1B69172B-4F1C-434B-A3BE-796891AB2BCA": "/2026/02/pop-culture-product-laws",
     "3B987EB8-9A80-4642-ACF8-59916AF48F1B": "/2026/01/the-ai-endgame-looks-a-lot-like-linux-vs-windowsmacos",
     "8F84E029-4292-488C-B4A7-F9F3E472B29E": "/2025/12/building-in-public"
   },
   "snippets": {
+    "1B69172B-4F1C-434B-A3BE-796891AB2BCA": {
+      "title": "Pop Culture Product Laws",
+      "slug": "2026/02/pop-culture-product-laws",
+      "humanDate": "February 2, 2026",
+      "content": "<p>I find a lot of inspiration for my work in weird places. This is a compilation of those oddities as weird laws.</p>\n\n<h2>Malcom\u2019s Law I:</h2>\n\n<blockquote><p>Your scientists were so preoccupied with whether they could, they didn't stop to think if they should</p></blockquote>\n\n<p>Just because you can build a thing, doesn\u2019t mean you should build the thing. Effective and early UX design provides the Should</p>\n\n<h2>Malcom\u2019s Law II</h2>\n\n<blockquote><p>Life, uh, finds a way</p></blockquote>\n\n<p>Users, uh, find a way.  Pave the cowpaths.</p>",
+      "snippet": "      <article id=\"2026/02/pop-culture-product-laws\">\n         <header>\n            <h1><a href=\"/thoughts/2026/02/pop-culture-product-laws.html\">Pop Culture Product Laws</a></h1>\n            <time datetime=\"2026-02-02T18:17:23.226577+00:00\">February 2, 2026</time>\n         </header>\n         <div class=\"article-content\">\n<p>I find a lot of inspiration for my work in weird places. This is a compilation of those oddities as weird laws.</p>\n\n<h2>Malcom\u2019s Law I:</h2>\n\n<blockquote><p>Your scientists were so preoccupied with whether they could, they didn't stop to think if they should</p></blockquote>\n\n<p>Just because you can build a thing, doesn\u2019t mean you should build the thing. Effective and early UX design provides the Should</p>\n\n<h2>Malcom\u2019s Law II</h2>\n\n<blockquote><p>Life, uh, finds a way</p></blockquote>\n\n<p>Users, uh, find a way.  Pave the cowpaths.</p>\n\n         </div>\n      </article>\n"
+    },
     "3B987EB8-9A80-4642-ACF8-59916AF48F1B": {
       "title": "The AI Endgame Looks a Lot Like Linux vs Windows/MacOS",
       "slug": "2026/01/the-ai-endgame-looks-a-lot-like-linux-vs-windowsmacos",
