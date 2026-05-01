@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>McAlester.Design — Portfolio</title>
+
+    <meta name="description" content="Duncan McAlester — selected portfolio. Design systems, kiosk experiences, government websites, and e-commerce, across two decades of constraint-driven work.">
+    <meta name="author" content="Duncan McAlester">
+    <link rel="canonical" href="https://mcalester.design/portfolio">
+
+    <link rel="icon" href="/favicon.png" sizes="32x32">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+    <link rel="preload" href="/fonts/Graphik-Regular-Web.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/Graphik-Medium-Web.woff2" as="font" type="font/woff2" crossorigin>
+
+    <link rel="stylesheet" href="css/site.css">
+    <link rel="stylesheet" href="css/portfolio.css">
+</head>
+<body class="portfolio" data-section="portfolio">
+
+
+   <header id="header">
+      <div id="masthead">
+
+         <h1><span class="site">McAlester</span><span class="section"> Portfolio</span></h1>
+
+      </div>
+
+   </header>
+
+   <main id="content">
+
+      <header class="portfolio-pagehead">
+         <div>
+            <h1>Portfolio</h1>
+            <p class="portfolio-eyebrow">Selected work · 2003 — 2025</p>
+         </div>
+         <p class="portfolio-pagelede">
+            Four projects across two decades and a few unforgiving industries — design systems
+            for satellite ground control, kiosk experiences, fifty-plus congressional websites,
+            and an e-commerce overhaul on top of four point-of-sale systems. The pattern,
+            usually, was the same: untangle the constraints first, then design what you can
+            actually build.
+         </p>
+      </header>
+
+      <!-- ============================================================
+           PROJECT 01 — ASTRO UXDS
+           ============================================================ -->
+      <section class="project" id="astro">
+         <aside class="project-rail">
+            <span class="project-num">01</span>
+
+            <div class="project-titlewrap">
+               <h2>Astro UXDS</h2>
+               <p class="project-lede">
+                  The bespoke design system commissioned by the U.S. Air Force and Space Force
+                  to support ground control for satellite operations — and the only one of its
+                  kind to outlive its program of record.
+               </p>
+            </div>
+
+            <div class="project-body">
+               <p>I joined Astro at the start as Lead Design Engineer. By version 2.0 I owned the program. The brief was narrow — components for satellite ground stations — but the work that mattered was wider: convincing a defense organization that an open, public, framework-agnostic system would outlast the access-controlled alternatives that had failed before it.</p>
+               <p>Three early decisions made Astro durable. I open-sourced the documentation and components, which sounds obvious until you’ve watched a year disappear into clearance reviews for a private wiki. I migrated the design assets from Sketch to Figma — Macs are rare in the Space Force, and asking operators to install software they couldn’t get approved was a non-starter. And I bet on W3C Web Components, knowing our consumers used a half-dozen frameworks and that some of these systems would still be running in 2040.</p>
+               <p>Over the program’s life I directed three migrations — Sketch to Figma, Lit to Stencil, and a heavyweight CMS to docs-as-code in markdown — without breaking a release. The work that surprised me, and probably mattered most, was the pattern library: a Timeline component used across satellite scheduling, classification markings to MIL-STD-1472, status systems, alerts, and full sample applications grounded in user research with operators.</p>
+            </div>
+
+            <dl class="project-meta">
+               <dt>Client</dt><dd>U.S. Air Force / Space Force</dd>
+               <dt>Role</dt><dd>Lead Design Engineer → Program Owner</dd>
+               <dt>Years</dt><dd>2015 — 2025</dd>
+               <dt class="project-stat-label">Adopting organizations across government, F500, startups</dt>
+               <dd class="project-stat-val">50+</dd>
+               <dt class="project-stat-label">Component downloads at peak</dt>
+               <dd class="project-stat-val">30K/mo</dd>
+               <dt class="project-stat-label">Documented dev-time savings on adopting projects</dt>
+               <dd class="project-stat-val">30%</dd>
+            </dl>
+         </aside>
+
+         <div class="carousel">
+            <div class="carousel-track" role="list" aria-label="Astro UXDS screens">
+               <figure class="carousel-screen" data-kind="wide" role="listitem">
+                  <div class="carousel-frame">
+                     <span class="carousel-num">01 / 05</span>
+                     <img src="/img/portfolio/astro-01-home.png" alt="Astro UXDS marketing site home page" loading="lazy">
+                  </div>
+                  <figcaption class="carousel-cap">
+                     <span class="carousel-cap-i">01</span>
+                     <span>Astro UXDS Docs-as-Code site — the public front door that opened access for teams building applications for the space domain. <a href="https://www.astrouxds.com/" target="_blank" rel="noopener">astrouxds.com</a></span>
+                  </figcaption>
+               </figure>
+               <figure class="carousel-screen" data-kind="wide" role="listitem">
+                  <div class="carousel-frame">
+                     <span class="carousel-num">02 / 05</span>
+                     <img src="/img/portfolio/astro-02-storybook.png" alt="Astro Storybook component playground" loading="lazy">
+                  </div>
+                  <figcaption class="carousel-cap">
+                     <span class="carousel-cap-i">02</span>
+                     <span>Early adopted of Storybook targeting developers and supplementing behavioral and design guidance. <a href="https://astro-components.netlify.app" target="_blank" rel="noopener">astro-components.netlify.app</a></span>
+                  </figcaption>
+               </figure>
+               <figure class="carousel-screen" data-kind="wide" role="listitem">
+                  <div class="carousel-frame">
+                     <span class="carousel-num">03 / 05</span>
+                     <img src="/img/portfolio/astro-03-figma.png" alt="Astro Figma library" loading="lazy">
+                  </div>
+                  <figcaption class="carousel-cap">
+                     <span class="carousel-cap-i">03</span>
+                     <span>Figma library — adoption skyrockted after migrating to Figma. Transition required detailed planning and coordination with project teams. <a href="https://www.figma.com/@astrouxds" target="_blank" rel="noopener">figma.com/@astrouxds</a></span>
+                  </figcaption>
+               </figure>
+               <figure class="carousel-screen" data-kind="wide" role="listitem">
+                  <div class="carousel-frame">
+                     <span class="carousel-num">04 / 05</span>
+                     <img src="/img/portfolio/astro-04-timeline.png" alt="Astro Timeline pattern in a scheduling app" loading="lazy">
+                  </div>
+                  <figcaption class="carousel-cap">
+                     <span class="carousel-cap-i">04</span>
+                     <span>Timeline pattern in a working scheduling app — a unique component for satellite ops with full guidance, web components and Figma parity.</span>
+                  </figcaption>
+               </figure>
+               <figure class="carousel-screen" data-kind="wide" role="listitem">
+                  <div class="carousel-frame">
+                     <span class="carousel-num">05 / 05</span>
+                     <img src="/img/portfolio/astro-05-sample-apps.png" alt="Astro sample applications" loading="lazy">
+                  </div>
+                  <figcaption class="carousel-cap">
+                     <span class="carousel-cap-i">05</span>
+                     <span>Sample applications and case studies — built from operator engagement sessions to show how components compose.</span>
+                  </figcaption>
+               </figure>
+            </div>
+            <p class="carousel-hint">drag, scroll, or swipe</p>
+         </div>
+      </section>
+
+      <!-- ============================================================
+           PROJECT 02 — TOYOTA HIGHWAY TO THE FUTURE
+           ============================================================ -->
+      <section class="project" id="toyota">
+         <aside class="project-rail">
+            <span class="project-num">02</span>
+
+            <div class="project-titlewrap">
+               <h2>Highway to the Future</h2>
+               <p class="project-lede">
+                  A traveling exhibit of 18 interactive touchscreen experiences, designed to
+                  teach hybrid drivetrain concepts to consumers who’d never thought about a
+                  car powertrain in their lives.
+               </p>
+            </div>
+
+            <div class="project-body">
+               <p>Toyota was launching the second-generation Prius and needed a way to explain Hybrid Synergy Drive to people standing in a parking lot. The answer was two semi-trucks of touchscreens — 9-inch up to 42-inch — and a barcode scanner at every station so a single user’s path through the experience earned them survey-eligible reward points.</p>
+               <p>The brief sat in an awkward middle: more substantial than a trade-show demo, less interactive than a game. Wireframes were drafted in OmniGraffle and the production work shipped in Adobe Flash, which was the right tool for full-bleed touchscreen in 2003 even if it ages poorly in screenshot form.</p>
+               <p>What I’d flag now: this work predates the discipline of measuring exhibit dwell time properly. We had scan data and survey responses but no good way to know which of the 18 screens actually moved the needle on consumer understanding.</p>
+            </div>
+
+            <dl class="project-meta">
+               <dt>Client</dt><dd>Toyota</dd>
+               <dt>Role</dt><dd>Interaction &amp; Visual Design</dd>
+               <dt>Years</dt><dd>2003 — 2004</dd>
+            </dl>
+         </aside>
+
+         <div class="carousel">
+            <div class="carousel-track" role="list" aria-label="Toyota Highway to the Future screens">
+               <figure class="carousel-screen" data-kind="wide" role="listitem">
+                  <div class="carousel-frame">
+                     <span class="carousel-num">01 / 02</span>
+                     <img src="/img/portfolio/toyota-01-kiosk-hero.png" alt="Toyota Mobile Hybrid Experience hero" loading="lazy">
+                  </div>
+                  <figcaption class="carousel-cap">
+                     <span class="carousel-cap-i">01</span>
+                     <span>Hero screen for the Mobile Hybrid Experience — and the small-screen variants that toured with the trailers.</span>
+                  </figcaption>
+               </figure>
+               <figure class="carousel-screen" data-kind="diagram" role="listitem">
+                  <div class="carousel-frame">
+                     <span class="carousel-num">02 / 02</span>
+                     <img src="/img/portfolio/toyota-02-wireframe-grid.png" alt="Wireframes-to-finished comparison" loading="lazy">
+                  </div>
+                  <figcaption class="carousel-cap">
+                     <span class="carousel-cap-i">02</span>
+                     <span>Wireframes-to-finished comparison across three of the 18 experiences.</span>
+                  </figcaption>
+               </figure>
+            </div>
+            <p class="carousel-hint">drag, scroll, or swipe</p>
+         </div>
+      </section>
+
+      <!-- ============================================================
+           PROJECT 03 — UNITED STATES SENATE
+           ============================================================ -->
+      <section class="project" id="senate">
+         <aside class="project-rail">
+            <span class="project-num">03</span>
+
+            <div class="project-titlewrap">
+               <h2>United States Senate</h2>
+               <p class="project-lede">
+                  Between 2004 and 2015 I designed more than fifty front-facing congressional
+                  websites and a handful of internal applications — for clients with no budget
+                  for user interviews and a deep institutional preference for the way things
+                  were done last time.
+               </p>
+            </div>
+
+            <div class="project-body">
+               <p>Government projects of this scale rarely fund market research, let alone qualitative interviews. So I worked with what was free and abundant: six years of Google Analytics across dozens of senator and committee sites, plus the on-site search logs.</p>
+               <p>I overlaid click-rates on the home page, surfaced top-time-on-page content, and pulled the searches that returned no results — which is usually the most honest signal a website has about what visitors actually want. With that data I made a case the client could argue with: a radically restructured layout that gave 70% of the home-page real estate to the content 70% of visitors actually came for, against a more traditional layout that respected the client’s communications priorities.</p>
+               <p>The traditional layout won. Government is conservative; that was the right outcome for the institution if not for the optimization curve. The exercise still mattered — every project after it started from a research brief, not an aesthetic preference.</p>
+            </div>
+
+            <dl class="project-meta">
+               <dt>Client</dt><dd>United States Senate</dd>
+               <dt>Role</dt><dd>Designer &amp; Researcher</dd>
+               <dt>Years</dt><dd>2004 — 2015</dd>
+            </dl>
+         </aside>
+
+         <div class="carousel">
+            <div class="carousel-track" role="list" aria-label="Senate project screens">
+               <figure class="carousel-screen" data-kind="wide" role="listitem">
+                  <div class="carousel-frame">
+                     <span class="carousel-num">01 / 03</span>
+                     <img src="/img/portfolio/senate-01-research.png" alt="Senate analytics research deck" loading="lazy">
+                  </div>
+                  <figcaption class="carousel-cap">
+                     <span class="carousel-cap-i">01</span>
+                     <span>Analytics research deck — top topics, hidden content, time-on-page, and entrance pages distilled into a one-page argument.</span>
+                  </figcaption>
+               </figure>
+               <figure class="carousel-screen" data-kind="wide" role="listitem">
+                  <div class="carousel-frame">
+                     <span class="carousel-num">02 / 03</span>
+                     <img src="/img/portfolio/senate-02-wireframes.png" alt="Two competing Senate site wireframes" loading="lazy">
+                  </div>
+                  <figcaption class="carousel-cap">
+                     <span class="carousel-cap-i">02</span>
+                     <span>Two competing wireframes: the data-led layout (left) and the more traditional layout that ultimately shipped (right).</span>
+                  </figcaption>
+               </figure>
+               <figure class="carousel-screen" data-kind="wide" role="listitem">
+                  <div class="carousel-frame">
+                     <span class="carousel-num">03 / 03</span>
+                     <img src="/img/portfolio/senate-03-progression.png" alt="Sketch to wireframe to mockup to HTML progression" loading="lazy">
+                  </div>
+                  <figcaption class="carousel-cap">
+                     <span class="carousel-cap-i">03</span>
+                     <span>Sketch → wireframe → mockup → HTML. The full progression for one of the 50+ sites.</span>
+                  </figcaption>
+               </figure>
+            </div>
+            <p class="carousel-hint">drag, scroll, or swipe</p>
+         </div>
+      </section>
+
+      <!-- ============================================================
+           PROJECT 04 — ZPIZZA
+           ============================================================ -->
+      <section class="project" id="zpizza">
+         <aside class="project-rail">
+            <span class="project-num">04</span>
+
+            <div class="project-titlewrap">
+               <h2>zPizza</h2>
+               <p class="project-lede">
+                  A complete redesign of the zPizza web presence and a bespoke online ordering
+                  system that had to sit gracefully on top of four different point-of-sale
+                  systems and three e-commerce vendors.
+               </p>
+            </div>
+
+            <div class="project-body">
+               <p>zPizza came to us with the kind of integration problem that gets quietly worse every quarter — four POS systems, three e-commerce vendors, frustrated franchisees, and customers who’d taught themselves to call the store instead of using the website. The brief was “a redesign.” The actual job was “untangle this.”</p>
+               <p>I led with research. A competitive teardown traced the full transaction across three direct competitors and two best-in-class e-commerce comps, on desktop and mobile, with annotated pros, cons, and lessons. A 5,000-respondent customer survey, paired with a separate franchisee survey segmented by POS and vendor, told me where customer pain and operator pain overlapped — and that overlap was the prioritization map.</p>
+               <p>The most useful single finding: 87% of users were on a browser less than a year old, and nearly half were already on mobile. That gave me license to lead with mobile in wireframes — unusual for a pizza chain in 2013 — and grow tablet and desktop out of the strongest mobile direction. The full ordering flow was wireframed end-to-end and built as a working prototype in Node, Backbone, Express, HTML5, and jQuery.</p>
+            </div>
+
+            <dl class="project-meta">
+               <dt>Client</dt><dd>zPizza</dd>
+               <dt>Role</dt><dd>Lead UX &amp; Research</dd>
+               <dt>Years</dt><dd>2013</dd>
+               <dt class="project-stat-label">Customers surveyed</dt>
+               <dd class="project-stat-val">5,000+</dd>
+               <dt class="project-stat-label">POS systems unified behind one ordering UI</dt>
+               <dd class="project-stat-val">4 → 1</dd>
+               <dt class="project-stat-label">Users on browsers &lt; 12 months old</dt>
+               <dd class="project-stat-val">87%</dd>
+            </dl>
+         </aside>
+
+         <div class="carousel">
+            <div class="carousel-track" role="list" aria-label="zPizza screens">
+               <figure class="carousel-screen" data-kind="wide" role="listitem">
+                  <div class="carousel-frame">
+                     <span class="carousel-num">01 / 07</span>
+                     <img src="/img/portfolio/zpizza-01-research.png" alt="zPizza competitive analysis and customer survey" loading="lazy">
+                  </div>
+                  <figcaption class="carousel-cap">
+                     <span class="carousel-cap-i">01</span>
+                     <span>Competitive analysis and customer survey — the research foundation that shaped every later decision.</span>
+                  </figcaption>
+               </figure>
+               <figure class="carousel-screen" data-kind="wide" role="listitem">
+                  <div class="carousel-frame">
+                     <span class="carousel-num">02 / 07</span>
+                     <img src="/img/portfolio/zpizza-02-synthesis.png" alt="zPizza customer and franchisee issue synthesis" loading="lazy">
+                  </div>
+                  <figcaption class="carousel-cap">
+                     <span class="carousel-cap-i">02</span>
+                     <span>Synthesis: customer issues, franchisee issues, and the overlap that became the prioritization map.</span>
+                  </figcaption>
+               </figure>
+               <figure class="carousel-screen" data-kind="diagram" role="listitem">
+                  <div class="carousel-frame">
+                     <span class="carousel-num">03 / 07</span>
+                     <img src="/img/portfolio/zpizza-06-userflow.png" alt="zPizza end-to-end user flow" loading="lazy">
+                  </div>
+                  <figcaption class="carousel-cap">
+                     <span class="carousel-cap-i">03</span>
+                     <span>End-to-end ordering user flow — geolocation, store selection, delivery boundaries, cart persistence. Pioneering features at the time later adopted by larger players in the space.</span>
+                  </figcaption>
+               </figure>
+               <figure class="carousel-screen" data-kind="wide" role="listitem">
+                  <div class="carousel-frame">
+                     <span class="carousel-num">04 / 07</span>
+                     <img src="/img/portfolio/zpizza-07-wireframes.png" alt="zPizza mobile ordering wireframes" loading="lazy">
+                  </div>
+                  <figcaption class="carousel-cap">
+                     <span class="carousel-cap-i">04</span>
+                     <span>zPizza’s target market were early adopters and had a larger mobile share of visitors than competitors at the time, the site and platform was designed as mobile-first before mobile-first was widely adopted.</span>
+                  </figcaption>
+               </figure>
+               <figure class="carousel-screen" data-kind="wide" role="listitem">
+                  <div class="carousel-frame">
+                     <span class="carousel-num">05 / 07</span>
+                     <img src="/img/portfolio/zpizza-03-mobile.png" alt="zPizza mobile mockups" loading="lazy">
+                  </div>
+                  <figcaption class="carousel-cap">
+                     <span class="carousel-cap-i">05</span>
+                     <span>Mobile mockups in the chosen visual direction.</span>
+                  </figcaption>
+               </figure>
+               <figure class="carousel-screen" data-kind="tall" role="listitem">
+                  <div class="carousel-frame">
+                     <span class="carousel-num">06 / 07</span>
+                     <img src="/img/portfolio/zpizza-04-ipad.png" alt="zPizza tablet mockup" loading="lazy">
+                  </div>
+                  <figcaption class="carousel-cap">
+                     <span class="carousel-cap-i">06</span>
+                     <span>Tablet — grown out of the selected mobile direction.</span>
+                  </figcaption>
+               </figure>
+               <figure class="carousel-screen" data-kind="wide" role="listitem">
+                  <div class="carousel-frame">
+                     <span class="carousel-num">07 / 07</span>
+                     <img src="/img/portfolio/zpizza-05-desktop.png" alt="zPizza desktop mockup" loading="lazy">
+                  </div>
+                  <figcaption class="carousel-cap">
+                     <span class="carousel-cap-i">07</span>
+                     <span>Desktop — the same system at the largest viewport.</span>
+                  </figcaption>
+               </figure>
+            </div>
+            <p class="carousel-hint">drag, scroll, or swipe</p>
+         </div>
+      </section>
+
+      <footer class="portfolio-pageend">
+         More work, NDA-bound or out of date, available on request — <a href="mailto:duncan@mcalester.design">duncan@mcalester.design</a>.
+      </footer>
+
+   </main>
+
+
+   <nav id="main-nav">
+      <ul>
+         <li><a href="index.html">Home</a></li>
+         <li class="portfolio"><a href="portfolio.html">Portfolio</a></li>
+         <li><a href="about.html">About</a></li>
+         <li><a href="/thoughts/">Thoughts</a></li>
+      </ul>
+   </nav>
+
+   <script src="js/md-glyph.js"></script>
+
+</body>
+</html>

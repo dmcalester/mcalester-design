@@ -7,6 +7,17 @@
     <language>en-us</language>
     <atom:link href="https://mcalester.design/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+  <title>LLMs are Probabilistic, Until They Aren’t</title>
+  <link>https://mcalester.design/2026/05/llms-are-probabilistic-until-they-arent.html</link>
+  <pubDate>Fri, 01 May 2026 14:38:35 +0000</pubDate>
+  <description><![CDATA[<p>Apparently, Anthropic’s agent.md FrontMatter is case-sensitive. Yep. If you use the <strong>tools </strong>key, all of your tools must be written as proper nouns: Bash and Grep work, bash and grep do not. How did I discover this?</p>
+<p>I built two agents to check something I’m working on. It was important they didn’t hallucinate, so I used <a href="https://platform.claude.com/docs/en/test-and-evaluate/strengthen-guardrails/reduce-hallucinations">Anthropic’s guidance on avoiding hallucinations</a>. I spun them up, had them generate a report which looked great, fed that to another agent with the task to fix the issues raised, and it came back with a surprising conclusion. Every single issue raised by the agents was in fact a hallucination. Sixteen issues, sixteen line numbers from code, sixteen severity indications. All a lie.</p>
+<p>I’ve had LLMs hallucinate before; we all have. I’ve never had anything like this. It was catastrophically bad. I checked my context window, and it was fine, well under 50%. Checked the agent markdown, and all the guardrails were there. I asked the main LLM thread what went wrong, and it suggested that the tools in the FrontMatter had an improper case. I thought that was absurd; FrontMatter doesn’t have strict formatting for its values, and all these tools were command line tools which are almost universally all lower-case, and these tools are famously probabilistic; surely they’re able to infer that <strong>bash</strong> is the same as <strong>Bash</strong>. I pushed back on that as the root cause; the severity of the fabrication was so high that my confidence in the LLM was at an all-time low.</p>
+<p>I spent 15 minutes or so working with the LLM, iterating through different configurations on the agent with the same 100% fabricated results. Turns out it was the tool name case. Once that change was made, a new report was generated with actual citations, actual line numbers in the code referenced, and validated as real.</p>
+<p>It’s a curiously restrictive requirement and dangerous in that it failed confidently. I was fortunate that the results were always intended to be reviewed, but if its outputs had no review step, it could have been disastrous. At the risk of adding another turtle<a id="2026/05/llms-are-probabilistic-until-they-arent--footnote-1--anchor" href="#2026/05/llms-are-probabilistic-until-they-arent--footnote-1"><sup>1</sup></a> I think I might create a peer review agent with the sole purpose of checking reports like this for erroneous citations and files.<sup></sup></p>]]></description>
+  <guid>https://mcalester.design/2026/05/llms-are-probabilistic-until-they-arent.html</guid>
+</item>
+<item>
   <title>Pop Culture Product Laws</title>
   <link>https://mcalester.design/2026/02/pop-culture-product-laws.html</link>
   <pubDate>Mon, 02 Feb 2026 18:17:23 +0000</pubDate>

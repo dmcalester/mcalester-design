@@ -1,0 +1,354 @@
+/* Portfolio section — depends on tokens.css from site.css.
+   Drop alongside the other css/ files; site.css already imports the
+   chrome rules (header, nav, base). This file extends them with a
+   page-specific layout: a sticky narrative rail per project and a
+   pure-CSS horizontal carousel of screens.
+
+   The carousel is JS-free: scroll-snap-type, scroll-snap-stop, and
+   touch momentum cover all gesture/scroll cases. */
+
+
+/* === Active-nav indicator (matches the existing pattern in nav.css) === */
+
+[data-section="portfolio"] li.portfolio {
+   box-shadow: inset 0 -3px 0 var(--key-color);
+}
+
+
+/* === Page-specific layout sizing === */
+
+:root {
+   --carousel-screen-height: clamp(420px, 64vh, 720px);
+   --carousel-rail-w: clamp(20rem, 30%, 26rem);
+   --carousel-gap: var(--grid-cell-size);
+}
+
+@media (max-width: 880px) {
+   :root {
+      --carousel-screen-height: clamp(320px, 48vh, 480px);
+      --carousel-rail-w: 100%;
+   }
+}
+
+
+/* === Page header (above the project list) === */
+
+.portfolio-pagehead {
+   padding: var(--spacing-double) 0 var(--spacing-full);
+   display: grid;
+   grid-template-columns: clamp(27ch, 30%, 23.5rem) 1fr;
+   gap: calc(var(--grid-cell-size) * 2);
+   border-bottom: var(--content-border-width) solid var(--content-border-color);
+}
+
+.portfolio-pagehead h1 {
+   font-size: calc(var(--grid-cell-size) * 1.4);
+   font-weight: var(--font-weight-bold);
+   line-height: var(--line-height-tight);
+   letter-spacing: -0.02em;
+   margin: calc(var(--spacing-eighth) * -1) 0 0 -3px;
+   text-wrap: pretty;
+}
+
+.portfolio-pagehead .portfolio-eyebrow {
+   font-size: var(--font-size-small);
+   color: oklch(from var(--text-color) l c h / .6);
+   text-transform: uppercase;
+   letter-spacing: 0.1em;
+   margin: 0;
+}
+
+.portfolio-pagehead .portfolio-pagelede {
+   font-size: var(--font-size-medium);
+   line-height: var(--line-height-normal);
+   letter-spacing: -0.01em;
+   margin: 0;
+   text-wrap: pretty;
+   max-width: 50ch;
+}
+
+@media (max-width: 880px) {
+   .portfolio-pagehead {
+      grid-template-columns: 1fr;
+      gap: var(--spacing-quarter);
+      padding: var(--spacing-full) 0 var(--spacing-half);
+   }
+   .portfolio-pagehead h1 { font-size: 2.5rem; }
+}
+
+
+/* === Project block === */
+
+.project {
+   display: grid;
+   grid-template-columns: var(--carousel-rail-w) 1fr;
+   gap: var(--grid-cell-size);
+   padding: var(--spacing-double) 0;
+   border-bottom: var(--content-border-width) solid var(--content-border-color);
+   align-items: start;
+}
+
+.project:last-of-type { border-bottom: none; }
+
+@media (max-width: 880px) {
+   .project {
+      grid-template-columns: 1fr;
+      padding: var(--spacing-full) 0;
+      gap: var(--spacing-half);
+   }
+}
+
+.project-num {
+   font-size: calc(var(--grid-cell-size) * 1.4);
+   font-weight: var(--font-weight-bold);
+   line-height: 1;
+   letter-spacing: -0.02em;
+   color: var(--key-color);
+   font-feature-settings: "tnum";
+   display: block;
+
+}
+
+
+/* — Rail: project meta + narrative (sticky on desktop) — */
+
+.project-rail {
+
+   position: sticky;
+   top: calc(var(--grid-cell-size) + var(--spacing-half));
+   align-self: start;
+   display: flex;
+   flex-direction: column;
+   gap: var(--spacing-eighth);
+}
+
+.project-titlewrap {
+   border-top: var(--content-border-width) solid var(--content-border-color);
+   padding-top: var(--spacing-quarter);
+}
+
+.project-rail h2 {
+   font-size: calc(var(--grid-cell-size) * 0.85);
+   font-weight: var(--font-weight-bold);
+   line-height: 1.05;
+   letter-spacing: -0.02em;
+   margin: 0 0 var(--spacing-quarter) 0;
+   text-wrap: balance;
+}
+
+.project-rail .project-lede {
+   font-size: var(--font-size-large);
+   line-height: 1.4;
+   margin: 0 0 var(--spacing-half) 0;
+   text-wrap: pretty;
+}
+
+.project-body p {
+   font-size: var(--font-size-small);
+   line-height: 1.45;
+   letter-spacing: 0.025em;
+   margin: 0 0 var(--spacing-half) 0;
+   text-wrap: pretty;
+}
+
+.project-meta {
+   display: grid;
+   grid-template-columns: 1fr;
+   gap: 0;
+   font-size: var(--font-size-small);
+   border-top: 1px solid var(--content-border-color);
+   padding-top: var(--spacing-half);
+   line-height: 1.2;
+   margin: 0;
+}
+
+.project-meta dt {
+   color: oklch(from var(--text-color) l c h / .55);
+   text-transform: uppercase;
+   font-size: 0.75rem;
+   letter-spacing: 0.1em;
+   font-weight: var(--font-weight-medium);
+   margin: 0;
+   line-height: 1.2;
+}
+
+.project-meta dd {
+   margin: 0 0 var(--spacing-quarter) 0;
+   line-height: 1.2;
+}
+
+.project-meta dd:last-child { margin-bottom: 0; }
+
+.project-meta dt.project-stat-label {
+   margin-top: var(--spacing-quarter);
+   padding-top: var(--spacing-quarter);
+   border-top: 1px dotted var(--content-border-color);
+}
+
+.project-meta dd.project-stat-val {
+   font-size: calc(var(--grid-cell-size) * 0.55);
+   font-weight: var(--font-weight-bold);
+   letter-spacing: -0.02em;
+   color: var(--key-color);
+   font-feature-settings: "tnum";
+   line-height: 1;
+   margin: 0 0 var(--spacing-quarter) 0;
+}
+
+@media (max-width: 880px) {
+   .project-rail { position: static; }
+}
+
+
+/* === Carousel — pure CSS scroll-snap === */
+
+.carousel {
+   position: relative;
+   /* Bleed past the right edge of #content so screens can run to the page edge */
+   margin-right: calc(var(--grid-cell-size) * -1);
+   min-width: 0;
+}
+
+@media (max-width: 880px) {
+   .carousel {
+      margin-right: calc(var(--grid-cell-size) * -1);
+      margin-left: calc(var(--grid-cell-size) * -1);
+   }
+}
+
+.carousel-track {
+   display: grid;
+   grid-auto-flow: column;
+   grid-auto-columns: max-content;
+   gap: var(--carousel-gap);
+   overflow-x: auto;
+   overflow-y: hidden;
+   scroll-snap-type: x mandatory;
+   scroll-padding-left: var(--grid-cell-size);
+   scroll-padding-right: var(--grid-cell-size);
+   padding: var(--spacing-quarter) var(--grid-cell-size) var(--spacing-half);
+   -webkit-overflow-scrolling: touch;
+   overscroll-behavior-x: contain;
+   scrollbar-width: thin;
+   scrollbar-color: var(--content-border-color) transparent;
+}
+
+.carousel-track::-webkit-scrollbar { height: 6px; }
+.carousel-track::-webkit-scrollbar-thumb { background: var(--content-border-color); }
+.carousel-track::-webkit-scrollbar-track { background: transparent; }
+
+.carousel-screen {
+   scroll-snap-align: start;
+   scroll-snap-stop: always;
+   display: grid;
+   grid-template-rows: 1fr auto;
+   gap: var(--spacing-quarter);
+   height: var(--carousel-screen-height);
+   margin: 0;
+}
+
+.carousel-frame {
+   background-color: var(--nav-background-color);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   overflow: hidden;
+   height: 100%;
+   position: relative;
+   outline: 1px solid transparent;
+   transition: outline-color var(--duration-normal) ease;
+}
+
+.carousel-frame:hover { outline-color: var(--key-color); }
+
+.carousel-frame img {
+   max-width: 100%;
+   max-height: 100%;
+   width: auto;
+   height: auto;
+   display: block;
+   object-fit: contain;
+}
+
+.carousel-num {
+   position: absolute;
+   top: var(--spacing-quarter);
+   left: var(--spacing-quarter);
+   font-size: 0.75rem;
+   font-weight: var(--font-weight-medium);
+   letter-spacing: 0.1em;
+   color: oklch(from var(--text-color) l c h / .5);
+   font-feature-settings: "tnum";
+   z-index: 2;
+}
+
+.carousel-cap {
+   font-size: var(--font-size-small);
+   line-height: var(--line-height-normal);
+   color: oklch(from var(--text-color) l c h / .75);
+   text-wrap: pretty;
+   max-width: 38ch;
+   display: flex;
+   gap: var(--spacing-quarter);
+   align-items: baseline;
+}
+
+.carousel-cap-i {
+   color: var(--key-color);
+   font-feature-settings: "tnum";
+   font-weight: var(--font-weight-medium);
+   flex-shrink: 0;
+}
+
+.carousel-cap a {
+   color: inherit;
+   text-decoration: underline;
+   text-decoration-color: var(--key-color);
+   text-decoration-thickness: 1px;
+   text-underline-offset: 2px;
+}
+
+/* Per-kind sizing — aspect-driven widths */
+.carousel-screen[data-kind="wide"]    { width: clamp(22rem, 56vh, 44rem); }
+.carousel-screen[data-kind="tall"]    { width: clamp(14rem, 32vh, 24rem); }
+.carousel-screen[data-kind="mobile"]  { width: clamp(10rem, 22vh, 14rem); }
+.carousel-screen[data-kind="diagram"] { width: clamp(28rem, 80vh, 56rem); }
+
+
+/* === Hint affordance — tells users to scroll horizontally === */
+
+.carousel-hint {
+   font-size: var(--font-size-small);
+   color: oklch(from var(--text-color) l c h / .55);
+   margin: var(--spacing-quarter) 0 0 var(--grid-cell-size);
+   display: flex;
+   align-items: center;
+   gap: var(--spacing-quarter);
+   font-style: italic;
+}
+
+.carousel-hint::after {
+   content: "→";
+   color: var(--key-color);
+   font-style: normal;
+   animation: carousel-hint-nudge 1.6s ease infinite;
+}
+
+@keyframes carousel-hint-nudge {
+   0%, 100% { transform: translateX(0); }
+   50% { transform: translateX(.4rem); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+   .carousel-hint::after { animation: none; }
+}
+
+
+/* === Page footer === */
+
+.portfolio-pageend {
+   padding: var(--spacing-double) 0;
+   border-top: var(--content-border-width) solid var(--content-border-color);
+   font-size: var(--font-size-small);
+   color: oklch(from var(--text-color) l c h / .6);
+}
